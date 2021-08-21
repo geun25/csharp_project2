@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace CampusLife
 {
-    class PStudent
+    class PStudent : Student
     {
+        internal PStudent(int num, string name) : base(num, name)
+        {
+
+        }
     }
 }

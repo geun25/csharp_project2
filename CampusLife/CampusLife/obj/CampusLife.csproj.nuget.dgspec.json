@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jin yeong\\Desktop\\C#\\플젝\\CampusLife\\CampusLife\\CampusLife.csproj": {}
+    "C:\\Users\\jin yeong\\.vscode\\csharp_project2\\CampusLife\\CampusLife\\CampusLife.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jin yeong\\Desktop\\C#\\플젝\\CampusLife\\CampusLife\\CampusLife.csproj": {
+    "C:\\Users\\jin yeong\\.vscode\\csharp_project2\\CampusLife\\CampusLife\\CampusLife.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jin yeong\\Desktop\\C#\\플젝\\CampusLife\\CampusLife\\CampusLife.csproj",
+        "projectUniqueName": "C:\\Users\\jin yeong\\.vscode\\csharp_project2\\CampusLife\\CampusLife\\CampusLife.csproj",
         "projectName": "CampusLife",
-        "projectPath": "C:\\Users\\jin yeong\\Desktop\\C#\\플젝\\CampusLife\\CampusLife\\CampusLife.csproj",
+        "projectPath": "C:\\Users\\jin yeong\\.vscode\\csharp_project2\\CampusLife\\CampusLife\\CampusLife.csproj",
         "packagesPath": "C:\\Users\\jin yeong\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jin yeong\\Desktop\\C#\\플젝\\CampusLife\\CampusLife\\obj\\",
+        "outputPath": "C:\\Users\\jin yeong\\.vscode\\csharp_project2\\CampusLife\\CampusLife\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\jin yeong\\AppData\\Roaming\\NuGet\\NuGet.Config",

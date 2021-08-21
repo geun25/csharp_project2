@@ -8,5 +8,14 @@ namespace CampusLife
 {
     class Campus
     {
+        internal Campus()
+        {
+
+        }
+
+        internal void InStudent(Student student)
+        {
+
+        }
     }
 }

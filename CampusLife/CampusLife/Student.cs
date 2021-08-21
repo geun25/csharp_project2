@@ -8,5 +8,9 @@ namespace CampusLife
 {
     class Student
     {
+        internal Student(int num, string name)
+        {
+
+        }
     }
 }

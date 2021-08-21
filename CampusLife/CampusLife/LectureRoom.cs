@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CampusLife
 {
-    class LectureRoom
+    class LectureRoom : Place
     {
     }
 }
