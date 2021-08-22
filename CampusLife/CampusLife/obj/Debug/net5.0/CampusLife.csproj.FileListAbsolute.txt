@@ -1,0 +1,16 @@
+C:\Users\jin yeong\.vscode\csharp_project2\CampusLife\CampusLife\bin\Debug\net5.0\CampusLife.exe
+C:\Users\jin yeong\.vscode\csharp_project2\CampusLife\CampusLife\bin\Debug\net5.0\CampusLife.deps.json
+C:\Users\jin yeong\.vscode\csharp_project2\CampusLife\CampusLife\bin\Debug\net5.0\CampusLife.runtimeconfig.json
+C:\Users\jin yeong\.vscode\csharp_project2\CampusLife\CampusLife\bin\Debug\net5.0\CampusLife.runtimeconfig.dev.json
+C:\Users\jin yeong\.vscode\csharp_project2\CampusLife\CampusLife\bin\Debug\net5.0\CampusLife.dll
+C:\Users\jin yeong\.vscode\csharp_project2\CampusLife\CampusLife\bin\Debug\net5.0\ref\CampusLife.dll
+C:\Users\jin yeong\.vscode\csharp_project2\CampusLife\CampusLife\bin\Debug\net5.0\CampusLife.pdb
+C:\Users\jin yeong\.vscode\csharp_project2\CampusLife\CampusLife\obj\Debug\net5.0\CampusLife.csproj.AssemblyReference.cache
+C:\Users\jin yeong\.vscode\csharp_project2\CampusLife\CampusLife\obj\Debug\net5.0\CampusLife.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jin yeong\.vscode\csharp_project2\CampusLife\CampusLife\obj\Debug\net5.0\CampusLife.AssemblyInfoInputs.cache
+C:\Users\jin yeong\.vscode\csharp_project2\CampusLife\CampusLife\obj\Debug\net5.0\CampusLife.AssemblyInfo.cs
+C:\Users\jin yeong\.vscode\csharp_project2\CampusLife\CampusLife\obj\Debug\net5.0\CampusLife.csproj.CoreCompileInputs.cache
+C:\Users\jin yeong\.vscode\csharp_project2\CampusLife\CampusLife\obj\Debug\net5.0\CampusLife.dll
+C:\Users\jin yeong\.vscode\csharp_project2\CampusLife\CampusLife\obj\Debug\net5.0\ref\CampusLife.dll
+C:\Users\jin yeong\.vscode\csharp_project2\CampusLife\CampusLife\obj\Debug\net5.0\CampusLife.pdb
+C:\Users\jin yeong\.vscode\csharp_project2\CampusLife\CampusLife\obj\Debug\net5.0\CampusLife.genruntimeconfig.cache

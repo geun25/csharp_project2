@@ -12,5 +12,10 @@ namespace CampusLife
         {
 
         }
+
+        internal void TalkingInSleep()
+        {
+
+        }
     }
 }

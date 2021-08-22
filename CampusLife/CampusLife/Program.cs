@@ -52,7 +52,9 @@ namespace CampusLife
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            CampusLife campusLife = CampusLife.Singleton;
+            campusLife.Init();
+            campusLife.Run();
         }
     }
 }
