@@ -49,6 +49,22 @@ namespace CampusLife
         internal const ConsoleKey MoveStuKey = ConsoleKey.F1;
         internal const ConsoleKey MoveFocusKey = ConsoleKey.F2;
         internal const ConsoleKey ViewKey = ConsoleKey.F3;
+
+        internal const ConsoleKey LR_Forwarding = ConsoleKey.F1;
+        internal const ConsoleKey LR_Announce = ConsoleKey.F2;
+
+        internal const ConsoleKey LI_Seminar = ConsoleKey.F1;
+        internal const ConsoleKey LI_Reading = ConsoleKey.F2;
+
+        internal const ConsoleKey DO_Sleep = ConsoleKey.F1;
+        internal const ConsoleKey DO_TV = ConsoleKey.F2;
+
+        internal const int CMD_LR_Forwarding = (int)LR_Forwarding;
+        internal const int CMD_LR_Announce = (int)LR_Announce;
+        internal const int CMD_LI_Seminar = (int)LI_Seminar;
+        internal const int CMD_LI_Reading = (int)LI_Reading;
+        internal const int CMD_DO_Sleep = (int)DO_Sleep;
+        internal const int CMD_DO_TV = (int)DO_TV;
     }
 
     static class EHLib

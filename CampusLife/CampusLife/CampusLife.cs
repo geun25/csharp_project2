@@ -44,7 +44,106 @@ namespace CampusLife
 
         private void MoveFocus()
         {
+            Console.WriteLine("포커스 이동 기능을 선택하였습니다.");
+            Place place = SelectPlace();
+            if(place == null)
+            {
+                Console.WriteLine("잘못 선택하였습니다.");
+                return;
+            }
+            MoveFocusAt(place);
+            ComeBack(place);
+        }
+
+        private void ComeBack(Place place)
+        {
+            while(true)
+            {
+                ViewStuInfoInPlace(place);
+                Console.WriteLine("복귀할 학생 번호를 입력하세요. 없을 때는 0을 입력");
+                int num = EHLib.GetNum();
+                if(num == 0)          
+                    return;
+                Student student = place[num];
+                if(student == null)
+                {
+                    Console.WriteLine("잘못 선택하였습니다.");
+                    return;
+                }
+                place.OutStudent(student); 
+                campus.InStudent(student);
+            }
+        }
+
+        private void ViewStuInfoInPlace(Place place)
+        {
+            int scnt = place.GetStuCount();
+            for(int i=0; i<scnt; i++)
+            {
+                Console.WriteLine(place.GetStuInfo(i));
+            }
+        }
+
+        private void MoveFocusAt(Place place)
+        {
+            if(place is LectureRoom)
+            {
+                FocusAtLectureRoom(place as LectureRoom);
+            }
+            if (place is Library)
+            {
+                FocusAtLibrary(place as Library);
+            }
+            if (place is Dormitory)
+            {
+                FocusAtDormitory(place as Dormitory);
+            }
+        }
+
+        private void FocusAtDormitory(Dormitory dormitory)
+        {
             throw new NotImplementedException();
+        }
+
+        private void FocusAtLibrary(Library library)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void FocusAtLectureRoom(LectureRoom lectureRoom)
+        {
+            ConsoleKey key;
+            while ((key = SelectLRMenu()) != GameRule.ExitKey)
+            {
+                switch (key)
+                {
+                    case GameRule.LR_Forwarding: StartForwarding(lectureRoom); break;
+                    case GameRule.LR_Announce: StartAnnounce(lectureRoom); break;                    
+                    default: Console.WriteLine("잘못 선택하였습니다."); break;
+                }
+                Console.WriteLine("아무키나 누르세요.");
+                Console.ReadKey(true); 
+            }
+        }
+
+        private void StartAnnounce(LectureRoom lectureRoom)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void StartForwarding(LectureRoom lectureRoom)
+        {
+            lectureRoom.DoIt(GameRule.CMD_LR_Forwarding)
+        }
+
+        ConsoleKey SelectLRMenu()
+        {
+            Console.Clear();
+            Console.WriteLine("강의실 메뉴");
+            Console.WriteLine($"{GameRule.LR_Forwarding} 판서강의");
+            Console.WriteLine($"{GameRule.LR_Announce} 발표수업");
+            Console.WriteLine($"{GameRule.ExitKey} 캠퍼스 생활로 돌아가기");
+            return Console.ReadKey(true).Key;
         }
 
         private void MoveStudent()
