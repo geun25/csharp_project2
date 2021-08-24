@@ -15,12 +15,42 @@ namespace CampusLife
 
         internal override void DoIt(int cmd)
         {
-            throw new NotImplementedException();
+            switch(cmd)
+            {
+                case GameRule.CMD_LI_Seminar: StartSeminar(); break;
+            }
+        }
+
+        private void StartSeminar()
+        {
+            int cnt = GetStuCount();
+            Student student;
+            for(int i=0; i<cnt; i++)
+            {
+                student = GetStudent(i);
+                student.ListenSeminar();
+            }
         }
 
         internal override void DoIt(int cmd, int snum)
         {
-            throw new NotImplementedException();
+            Student student = this[snum];
+            if(student == null)
+            {
+                Console.WriteLine("${snum}번 학생은 없습니다.");
+                return;
+            }
+
+            switch(cmd)
+            {
+                case GameRule.CMD_LI_Reading: StartReading(student); break;
+                default: return;
+            }
+        }
+
+        private void StartReading(Student student)
+        {
+            student.Reading();
         }
 
         public override string ToString()

@@ -80,4 +80,19 @@ namespace CampusLife
             return 0;
         }
     }
+
+    static class StudentValueDefine
+    {
+        internal const int MIN_IQ = 60;
+        internal const int MAX_IQ = 200;
+        internal const int DEF_IQ = 80;
+
+        internal const int MIN_HP = 0;
+        internal const int MAX_HP = 100;
+        internal const int DEF_HP = 50;
+
+        internal const int MIN_CP = 0;
+        internal const int MAX_CP = 100;
+        internal const int DEF_CP = 0;
+    }
 }

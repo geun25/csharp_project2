@@ -39,7 +39,13 @@ namespace CampusLife
 
         private void View()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("캠퍼스");
+            ViewStuInfoInCampus();
+            foreach(Place place in places)
+            {
+                Console.WriteLine(place);
+                ViewStuInfoInPlace(place);
+            }
         }
 
         private void MoveFocus()
@@ -102,12 +108,78 @@ namespace CampusLife
 
         private void FocusAtDormitory(Dormitory dormitory)
         {
-            throw new NotImplementedException();
+            ConsoleKey key;
+            while ((key = SelectDorMenu()) != GameRule.ExitKey)
+            {
+                switch (key)
+                {
+                    case GameRule.DO_Sleep: StartSleep(dormitory); break;
+                    case GameRule.DO_TV: StartTV(dormitory); break;
+                    default: Console.WriteLine("잘못 선택하였습니다."); break;
+                }
+                Console.WriteLine("아무키나 누르세요.");
+                Console.ReadKey(true);
+            }
+        }
+
+        private void StartTV(Dormitory dormitory)
+        {
+            dormitory.DoIt(GameRule.CMD_DO_TV);
+        }
+
+        private void StartSleep(Dormitory dormitory)
+        {
+            dormitory.DoIt(GameRule.CMD_DO_Sleep);
+        }
+
+        ConsoleKey SelectDorMenu()
+        {
+            Console.Clear();
+            Console.WriteLine("기숙사 메뉴");
+            Console.WriteLine($"{GameRule.CMD_DO_Sleep}: 잠자기");
+            Console.WriteLine($"{GameRule.CMD_DO_TV}: TV 시청");
+            Console.WriteLine($"{GameRule.ExitKey} 캠퍼스 생활로 돌아가기");
+            return Console.ReadKey(true).Key;
         }
 
         private void FocusAtLibrary(Library library)
         {
-            throw new NotImplementedException();
+            ConsoleKey key;
+            while ((key = SelectLibMenu()) != GameRule.ExitKey)
+            {
+                switch (key)
+                {
+                    case GameRule.LI_Seminar: StartSeminar(library); break;
+                    case GameRule.LI_Reading: StartReading(library); break;
+                    default: Console.WriteLine("잘못 선택하였습니다."); break;
+                }
+                Console.WriteLine("아무키나 누르세요.");
+                Console.ReadKey(true);
+            }
+        }
+
+        private void StartReading(Library library)
+        {
+            ViewStuInfoInPlace(library);
+            Console.WriteLine("책 읽기를 할 학생 번호를 입력하세요.");
+            int num = EHLib.GetNum();
+            library.DoIt(GameRule.CMD_LI_Reading, num);
+        }
+
+        private void StartSeminar(Library library)
+        {
+            library.DoIt(GameRule.CMD_LI_Seminar);
+        }
+
+        ConsoleKey SelectLibMenu()
+        {
+            Console.Clear();
+            Console.WriteLine("도서관 메뉴");
+            Console.WriteLine($"{GameRule.LI_Seminar}: 세미나");
+            Console.WriteLine($"{GameRule.LI_Reading}: 책 읽기");
+            Console.WriteLine($"{GameRule.ExitKey} 캠퍼스 생활로 돌아가기");
+
+            return Console.ReadKey(true).Key;
         }
 
         private void FocusAtLectureRoom(LectureRoom lectureRoom)
@@ -126,14 +198,17 @@ namespace CampusLife
             }
         }
 
-        private void StartAnnounce(LectureRoom lectureRoom)
+        private void StartAnnounce(LectureRoom lr)
         {
-            throw new NotImplementedException();
+            ViewStuInfoInPlace(lr);
+            Console.WriteLine("발표할 학생 번호를 입력하세요.");
+            int num = EHLib.GetNum();
+            lr.DoIt(GameRule.CMD_LR_Announce, num);
         }
 
-        private void StartForwarding(LectureRoom lectureRoom)
+        private void StartForwarding(LectureRoom lr)
         {
-            lectureRoom.DoIt(GameRule.CMD_LR_Forwarding)
+            lr.DoIt(GameRule.CMD_LR_Forwarding);
         }
 
         ConsoleKey SelectLRMenu()

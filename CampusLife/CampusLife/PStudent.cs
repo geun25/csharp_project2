@@ -15,7 +15,11 @@ namespace CampusLife
 
         internal void TalkingInSleep()
         {
-
+            Console.WriteLine($"{this} 아이큐:{Iq}, 체력:{Hp}, 대화능력:{Cp}");
+            Console.WriteLine("잠꼬대를 한다.");
+            Hp -= 1;
+            Iq += 1;
+            Console.WriteLine($"{this} 아이큐:{Iq}, 체력:{Hp}, 대화능력:{Cp}");
         }
     }
 }

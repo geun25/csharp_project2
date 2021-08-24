@@ -12,5 +12,12 @@ namespace CampusLife
         {
 
         }
+
+        internal override void WatchingTV()
+        {
+            base.WatchingTV();
+            Cp -= 1;
+            Console.WriteLine($"보수적인 학생, 추가로 대화능력에 변화:{Cp}");
+        }
     }
 }

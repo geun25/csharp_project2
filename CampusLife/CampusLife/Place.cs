@@ -25,6 +25,14 @@
             return i;
         }
 
+        protected Student GetStudent(int i)
+        {
+            int cnt = GetStuCount();
+            if ((i >= 0) && (i < cnt))
+                return students[i];
+            return null;
+        }
+
         public override string ToString()
         {
             return string.Empty;
