@@ -22,6 +22,10 @@ namespace CampusLife
             }
         }
 
+        internal override void DoIt(int cmd, int snum)
+        {
+        }
+
         private void StartTV()
         {
             int cnt = GetStuCount();
@@ -48,10 +52,6 @@ namespace CampusLife
                     pstu.TalkingInSleep();
                 }
             }
-        }
-
-        internal override void DoIt(int cmd, int snum)
-        {           
         }
 
         public override string ToString()

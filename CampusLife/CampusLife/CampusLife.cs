@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CampusLife
 {
@@ -17,8 +13,69 @@ namespace CampusLife
 
         internal static CampusLife Singleton
         {
-            get;
+            get
+            {
+                return singleton;
+            }
         }
+
+        internal void Init()
+        {
+            MakePlaces();
+            MakeStudents();
+        }
+
+        private void MakePlaces()
+        {
+            campus = new Campus();
+            places[(int)PlaceType.PT_LECTUREROOM] = new LectureRoom();
+            places[(int)PlaceType.PT_DORMITORY] = new Dormitory();
+            places[(int)PlaceType.PT_LIBRARY] = new Library();
+        }
+
+        private void MakeStudents()
+        {
+            int max_students = GameRule.MaxStudents;
+            Student student = null;
+            for (int i = 0; i < max_students; i++)
+            {
+                student = MakeStudent(i + 1);
+                campus.InStudent(student);
+            }
+        }
+
+        private Student MakeStudent(int nth)
+        {
+            Console.WriteLine($"{nth}번째 생성할 학생 정보 입력===");
+
+            StuType stype = SelectStuType();
+            Console.WriteLine("학생 이름을 입력하세요.");
+            string name = Console.ReadLine();
+            switch (stype)
+            {
+                case StuType.ST_CSTUDENT: return new CStudent(nth, name);
+                case StuType.ST_MSTUDENT: return new MStudent(nth, name);
+                case StuType.ST_PSTUDENT: return new PStudent(nth, name);
+            }
+            return null;
+        }
+
+        private StuType SelectStuType()
+        {
+            Console.WriteLine("생성할 학생 유형을 선택하세요.");
+            Console.WriteLine($"{(int)StuType.ST_CSTUDENT}도전적(디폴트) {(int)StuType.ST_MSTUDENT}보수적 {(int)StuType.ST_PSTUDENT}수동적");
+                
+            switch (EHLib.GetNum())
+            {
+                case (int)StuType.ST_CSTUDENT: return StuType.ST_CSTUDENT;
+                case (int)StuType.ST_MSTUDENT: return StuType.ST_MSTUDENT;
+                case (int)StuType.ST_PSTUDENT: return StuType.ST_PSTUDENT;
+                default: return StuType.ST_CSTUDENT;
+            }
+        }
+
+        Campus campus = null;
+        Place[] places = new Place[(int)PlaceType.MAX_PLACES];
 
         internal void Run()
         {
@@ -283,69 +340,9 @@ namespace CampusLife
             return Console.ReadKey(true).Key;
         }
 
-        internal void Init()
-        {
-            MakePlace();
-            MakeStudents();
-        }
-
-        private void MakeStudents()
-        {
-            int max_students = GameRule.MaxStudents;
-            Student student = null;
-            for(int i=0; i<max_students; i++)
-            {
-                student = MakeStudent(i + 1);
-                campus.InStudent(student);
-            }
-        }
-
-        private Student MakeStudent(int nth)
-        {
-            Console.WriteLine($"{nth}번째 생성할 학생 정보 입력===");
-
-            StuType stype = SelectStuType();
-            Console.WriteLine("학생 이름을 입력하세요.");
-            string name = Console.ReadLine();
-            switch(stype)
-            {
-                case StuType.ST_CSTUDENT: return new CStudent(nth, name);
-                case StuType.ST_MSTUDENT: return new MStudent(nth, name);
-                case StuType.ST_PSTUDENT: return new PStudent(nth, name);
-            }
-            return null;
-        }
-
-        private StuType SelectStuType()
-        {
-            Console.WriteLine("생성할 학생 유형을 선택하세요.");
-            Console.WriteLine("{0}도전적(디폴트) {1}보수적 {2}수동적",
-                (int)StuType.ST_CSTUDENT, (int)StuType.ST_MSTUDENT, (int)StuType.ST_PSTUDENT);
-            switch(EHLib.GetNum())
-            {
-                case (int)StuType.ST_CSTUDENT: return StuType.ST_CSTUDENT;
-                case (int)StuType.ST_MSTUDENT: return StuType.ST_MSTUDENT;
-                case (int)StuType.ST_PSTUDENT: return StuType.ST_PSTUDENT;
-                default: return StuType.ST_CSTUDENT;
-            }
-        }
-
-        Campus campus = null;
-        Place[] places = new Place[(int)PlaceType.MAX_PLACES];
-
-        private void MakePlace()
-        {
-            campus = new Campus();
-            places[(int)PlaceType.PT_LECTUREROOM] = new LectureRoom();
-            places[(int)PlaceType.PT_DORMITORY] = new Dormitory();
-            places[(int)PlaceType.PT_LIBRARY] = new Library();
-        }
-
         private CampusLife() // 개체 생성을 다른 형식에서 접근할 수 없게 private 접근 지정
         {
 
-        }
-
-        
+        }      
     }
 }

@@ -23,7 +23,7 @@ namespace CampusLife
             {
                 return user_max_students;
             }
-            private set
+            private set // 해당 값을 결정하는 부분은 내부에서만 가능
             {
                 if(value < min_students)
                 {
