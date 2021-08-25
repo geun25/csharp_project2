@@ -114,7 +114,7 @@ namespace CampusLife
             Console.WriteLine($"{this} 아이큐:{Iq}, 체력:{Hp}, 대화능력:{Cp}");
         }
 
-        internal virtual void Reading()
+        internal virtual void Reading() // 도전적인 학생을 위한 가상 메서드
         {
             Console.WriteLine($"{this} 아이큐:{Iq}, 체력:{Hp}, 대화능력:{Cp}");
             Console.WriteLine("책을 읽다.");
@@ -131,7 +131,7 @@ namespace CampusLife
             Console.WriteLine($"{this} 아이큐:{Iq}, 체력:{Hp}, 대화능력:{Cp}");
         }
 
-        internal virtual void WatchingTV()
+        internal virtual void WatchingTV()// 보수적인 학생을 위한 가상 메서드
         {
             Console.WriteLine($"{this} 아이큐:{Iq}, 체력:{Hp}, 대화능력:{Cp}");
             Console.WriteLine("TV를 시청하다.");

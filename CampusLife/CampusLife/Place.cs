@@ -25,7 +25,7 @@
             return i;
         }
 
-        protected Student GetStudent(int i)
+        protected Student GetStudent(int i) // protected 파생형식에서 접근가능해야함.
         {
             int cnt = GetStuCount();
             if ((i >= 0) && (i < cnt))

@@ -17,12 +17,12 @@ namespace CampusLife
         {
             switch(cmd)
             {
-                case GameRule.CMD_LR_Forwarding: StartForwording(); break;
+                case GameRule.CMD_LR_Forwarding: StartForwarding(); break;
                 default: return;
             }
         }
 
-        private void StartForwording()
+        private void StartForwarding()
         {
             int cnt = GetStuCount();
             Student student = null;
@@ -62,7 +62,7 @@ namespace CampusLife
             for(int i=0; i<cnt; i++)
             {
                 stu = GetStudent(i);
-                if (stu == student)
+                if (stu != student) // 나머지 학생은 자유토론
                     stu.Discuss();
             }
         }
