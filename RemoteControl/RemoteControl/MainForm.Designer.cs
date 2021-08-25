@@ -81,6 +81,7 @@ namespace RemoteControl
             this.btn_setting.TabIndex = 4;
             this.btn_setting.Text = "설정하기";
             this.btn_setting.UseVisualStyleBackColor = true;
+            this.btn_setting.Click += new System.EventHandler(this.btn_setting_Click);
             // 
             // btn_ok
             // 
@@ -101,7 +102,7 @@ namespace RemoteControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(533, 300);
+            this.ClientSize = new System.Drawing.Size(841, 300);
             this.Controls.Add(this.btn_ok);
             this.Controls.Add(this.btn_setting);
             this.Controls.Add(this.tbox_contoller_ip);
