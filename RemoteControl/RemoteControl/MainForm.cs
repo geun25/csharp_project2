@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RCEventArgsLib;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,7 +12,7 @@ using System.Windows.Forms;
 namespace RemoteControl
 {
     public partial class MainForm : Form
-    {
+    {       
         public MainForm()
         {
             InitializeComponent();
@@ -20,21 +21,32 @@ namespace RemoteControl
         private void btn_setting_Click(object sender, EventArgs e)
         {
             string ip = tbox_ip.Text;
-            SetUpClient.ConnectedEventHandler += SetUpClient_ConnectedEventHandler;
-            SetUpClient.ConnectFailedEventHandler += SetUpClient_ConnectFailedEventHandler;
+            //SetUpClient.ConnectedEventHandler += SetUpClient_ConnectedEventHandler;
+            //SetUpClient.ConnectFailedEventHandler += SetUpClient_ConnectFailedEventHandler;
             SetUpClient.Setup(ip, 10200);
 
         }
 
         private void SetUpClient_ConnectFailedEventHandler(object sender, EventArgs e)
         {
-            MessageBox.Show("연결 요청이 실패하였습니다.");
+            //MessageBox.Show("연결 요청이 실패하였습니다.");
 
         }
 
         private void SetUpClient_ConnectedEventHandler(object sender, EventArgs e)
         {
-            MessageBox.Show("연결 요청에 대한 처리를 완료하였습니다.");
+            //MessageBox.Show("연결 요청에 대한 처리를 완료하였습니다.");
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            SetUpServer.RecvedRCInfoEventHandler += SetUpServer_RecvedRCInfoEventHandler;
+            SetUpServer.Start("127.0.0.1", 10200);
+        }
+
+        private void SetUpServer_RecvedRCInfoEventHandler(object sender, RecvRCInfoEventArgs e)
+        {
+            tbox_contoller_ip.Text = e.IPAddressStr;
         }
     }
 }

@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.31613.86
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RemoteControl", "RemoteControl\RemoteControl.csproj", "{A7692DD0-2111-4D9E-A84C-D23DE3B8B8B4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RecvRCInfoEventLib", "RecvRCInfoEventLib\RecvRCInfoEventLib.csproj", "{6011029D-21AE-4A7B-A9D6-BAA5D64B77D7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{A7692DD0-2111-4D9E-A84C-D23DE3B8B8B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A7692DD0-2111-4D9E-A84C-D23DE3B8B8B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A7692DD0-2111-4D9E-A84C-D23DE3B8B8B4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6011029D-21AE-4A7B-A9D6-BAA5D64B77D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6011029D-21AE-4A7B-A9D6-BAA5D64B77D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6011029D-21AE-4A7B-A9D6-BAA5D64B77D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6011029D-21AE-4A7B-A9D6-BAA5D64B77D7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
