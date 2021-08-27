@@ -1,0 +1,6 @@
+C:\Users\jin yeong\.vscode\csharp_project2\RemoteControl\ImgSendRecvLib\obj\Debug\ImgSendRecvLib.csproj.AssemblyReference.cache
+C:\Users\jin yeong\.vscode\csharp_project2\RemoteControl\ImgSendRecvLib\obj\Debug\ImgSendRecvLib.csproj.CoreCompileInputs.cache
+C:\Users\jin yeong\.vscode\csharp_project2\RemoteControl\ImgSendRecvLib\bin\Debug\ImgSendRecvLib.dll
+C:\Users\jin yeong\.vscode\csharp_project2\RemoteControl\ImgSendRecvLib\bin\Debug\ImgSendRecvLib.pdb
+C:\Users\jin yeong\.vscode\csharp_project2\RemoteControl\ImgSendRecvLib\obj\Debug\ImgSendRecvLib.dll
+C:\Users\jin yeong\.vscode\csharp_project2\RemoteControl\ImgSendRecvLib\obj\Debug\ImgSendRecvLib.pdb

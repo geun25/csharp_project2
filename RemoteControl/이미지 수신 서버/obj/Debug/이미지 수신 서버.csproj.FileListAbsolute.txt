@@ -1,0 +1,13 @@
+C:\Users\jin yeong\.vscode\csharp_project2\RemoteControl\이미지 수신 서버\bin\Debug\이미지 수신 서버.exe.config
+C:\Users\jin yeong\.vscode\csharp_project2\RemoteControl\이미지 수신 서버\bin\Debug\이미지 수신 서버.exe
+C:\Users\jin yeong\.vscode\csharp_project2\RemoteControl\이미지 수신 서버\bin\Debug\이미지 수신 서버.pdb
+C:\Users\jin yeong\.vscode\csharp_project2\RemoteControl\이미지 수신 서버\bin\Debug\ImgSendRecvLib.dll
+C:\Users\jin yeong\.vscode\csharp_project2\RemoteControl\이미지 수신 서버\bin\Debug\ImgSendRecvLib.pdb
+C:\Users\jin yeong\.vscode\csharp_project2\RemoteControl\이미지 수신 서버\obj\Debug\이미지 수신 서버.csproj.AssemblyReference.cache
+C:\Users\jin yeong\.vscode\csharp_project2\RemoteControl\이미지 수신 서버\obj\Debug\이미지_수신_서버.Form1.resources
+C:\Users\jin yeong\.vscode\csharp_project2\RemoteControl\이미지 수신 서버\obj\Debug\이미지_수신_서버.Properties.Resources.resources
+C:\Users\jin yeong\.vscode\csharp_project2\RemoteControl\이미지 수신 서버\obj\Debug\이미지 수신 서버.csproj.GenerateResource.cache
+C:\Users\jin yeong\.vscode\csharp_project2\RemoteControl\이미지 수신 서버\obj\Debug\이미지 수신 서버.csproj.CoreCompileInputs.cache
+C:\Users\jin yeong\.vscode\csharp_project2\RemoteControl\이미지 수신 서버\obj\Debug\이미지 수신 서버.csproj.CopyComplete
+C:\Users\jin yeong\.vscode\csharp_project2\RemoteControl\이미지 수신 서버\obj\Debug\이미지 수신 서버.exe
+C:\Users\jin yeong\.vscode\csharp_project2\RemoteControl\이미지 수신 서버\obj\Debug\이미지 수신 서버.pdb

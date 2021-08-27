@@ -1,0 +1,7 @@
+C:\Users\jin yeong\.vscode\csharp_project2\RemoteControl\Wind32 Migration\bin\Debug\Wind32 Migration.exe.config
+C:\Users\jin yeong\.vscode\csharp_project2\RemoteControl\Wind32 Migration\bin\Debug\Wind32 Migration.exe
+C:\Users\jin yeong\.vscode\csharp_project2\RemoteControl\Wind32 Migration\bin\Debug\Wind32 Migration.pdb
+C:\Users\jin yeong\.vscode\csharp_project2\RemoteControl\Wind32 Migration\obj\Debug\Wind32 Migration.csproj.AssemblyReference.cache
+C:\Users\jin yeong\.vscode\csharp_project2\RemoteControl\Wind32 Migration\obj\Debug\Wind32 Migration.csproj.CoreCompileInputs.cache
+C:\Users\jin yeong\.vscode\csharp_project2\RemoteControl\Wind32 Migration\obj\Debug\Wind32 Migration.exe
+C:\Users\jin yeong\.vscode\csharp_project2\RemoteControl\Wind32 Migration\obj\Debug\Wind32 Migration.pdb
