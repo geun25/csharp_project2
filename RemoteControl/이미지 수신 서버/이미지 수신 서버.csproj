@@ -84,6 +84,10 @@
       <Project>{e15a0329-96e2-4f06-b1c2-98536fa5a7dd}</Project>
       <Name>ImgSendRecvLib</Name>
     </ProjectReference>
+    <ProjectReference Include="..\KMESendRecvLib\KMESendRecvLib.csproj">
+      <Project>{af105a83-349f-4e1e-8430-22f0d42d6ad4}</Project>
+      <Name>KMESendRecvLib</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -11,3 +11,5 @@ C:\Users\jin yeong\.vscode\csharp_project2\RemoteControl\이미지 캡처 및 �
 C:\Users\jin yeong\.vscode\csharp_project2\RemoteControl\이미지 캡처 및 전송 클라이언트\obj\Debug\이미지 캡처 및 전송 클라이언트.csproj.CopyComplete
 C:\Users\jin yeong\.vscode\csharp_project2\RemoteControl\이미지 캡처 및 전송 클라이언트\obj\Debug\이미지 캡처 및 전송 클라이언트.exe
 C:\Users\jin yeong\.vscode\csharp_project2\RemoteControl\이미지 캡처 및 전송 클라이언트\obj\Debug\이미지 캡처 및 전송 클라이언트.pdb
+C:\Users\jin yeong\.vscode\csharp_project2\RemoteControl\이미지 캡처 및 전송 클라이언트\bin\Debug\KMESendRecvLib.dll
+C:\Users\jin yeong\.vscode\csharp_project2\RemoteControl\이미지 캡처 및 전송 클라이언트\bin\Debug\KMESendRecvLib.pdb

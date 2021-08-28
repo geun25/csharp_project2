@@ -62,5 +62,45 @@ namespace 이미지_캡처_및_전송_클라이언트
             trackBar1.Maximum = trackBar3.Maximum = Screen.PrimaryScreen.Bounds.Width;
             trackBar2.Maximum = trackBar4.Maximum = Screen.PrimaryScreen.Bounds.Height;
         }
+
+        private void richTextBox1_MouseUp(object sender, MouseEventArgs e)
+        {
+            if (ip == null)
+                return;
+            SendEventClient sec = new SendEventClient(ip, 10300);
+            sec.SendMouseUp(e.Button);
+        }
+
+        private void richTextBox1_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (ip == null)
+                return;
+            SendEventClient sec = new SendEventClient(ip, 10300);
+            sec.SendMouseMove(e.X, e.Y);
+        }
+
+        private void richTextBox1_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (ip == null)
+                return;
+            SendEventClient sec = new SendEventClient(ip, 10300);
+            sec.SendMouseDown(e.Button);
+        }
+
+        private void richTextBox1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (ip == null)
+                return;
+            SendEventClient sec = new SendEventClient(ip, 10300);
+            sec.SendKeyDown(e.KeyValue);
+        }
+
+        private void richTextBox1_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (ip == null)
+                return;
+            SendEventClient sec = new SendEventClient(ip, 10300);
+            sec.SendKeyUp(e.KeyValue);
+        }
     }
 }
