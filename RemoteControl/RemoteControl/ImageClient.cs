@@ -1,13 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Drawing;
 using System.Drawing.Imaging;
 using System.IO;
-using System.Linq;
 using System.Net;
 using System.Net.Sockets;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace RemoteControl
 {
@@ -54,6 +50,11 @@ namespace RemoteControl
             }
         }
 
+        /// <summary>
+        /// 비동기 처리
+        /// </summary>
+        /// <param name="img"></param>
+        /// <param name="callback"></param>
         public void SendImageAsync(Image img, AsyncCallback callback)
         {
             SendImageDele dele = SendImage;

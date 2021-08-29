@@ -1,11 +1,7 @@
 ﻿using RCEventArgsLib;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Net;
 using System.Net.Sockets;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace RemoteControl
 {
@@ -30,7 +26,7 @@ namespace RemoteControl
             lis_sock = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
             lis_sock.Bind(ep);
             lis_sock.Listen(1);
-            lis_sock.BeginAccept(DoAccept, null);
+            lis_sock.BeginAccept(DoAccept, null); // 비동기 처리
         }
 
         internal static void Start(object myIP, NetworkInfo networkInfo)
