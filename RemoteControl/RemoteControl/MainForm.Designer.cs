@@ -92,11 +92,17 @@ namespace RemoteControl
             this.btn_ok.TabIndex = 5;
             this.btn_ok.Text = "원격제어허용";
             this.btn_ok.UseVisualStyleBackColor = true;
+            this.btn_ok.Click += new System.EventHandler(this.btn_ok_Click);
+            // 
+            // timer_send_image
+            // 
+            this.timer_send_image.Tick += new System.EventHandler(this.timer_send_image_Tick);
             // 
             // noti
             // 
             this.noti.Text = "notifyIcon1";
             this.noti.Visible = true;
+            this.noti.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.noti_MouseDoubleClick);
             // 
             // MainForm
             // 
@@ -111,6 +117,7 @@ namespace RemoteControl
             this.Controls.Add(this.label1);
             this.Name = "MainForm";
             this.Text = "원격제어기";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MainForm_FormClosed);
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -40,6 +40,11 @@ namespace RemoteControl
             }
         }
 
+        public void StartEventClient()
+        {
+            sce = new SendEventClient(host_ip, NetworkInfo.EventPort);
+        }
+
         public string MyIP
         {
             get

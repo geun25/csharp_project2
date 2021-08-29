@@ -33,6 +33,16 @@ namespace RemoteControl
             lis_sock.BeginAccept(DoAccept, null);
         }
 
+        internal static void Start(object myIP, NetworkInfo networkInfo)
+        {
+            throw new NotImplementedException();
+        }
+
+        internal static void Start(object net)
+        {
+            throw new NotImplementedException();
+        }
+
         static void DoAccept(IAsyncResult result)
         {
             if(lis_sock == null)

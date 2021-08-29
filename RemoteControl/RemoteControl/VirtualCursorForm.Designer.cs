@@ -29,10 +29,24 @@ namespace RemoteControl
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // VirtualCursorForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.BackColor = System.Drawing.Color.Red;
+            this.ClientSize = new System.Drawing.Size(15, 15);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.MaximumSize = new System.Drawing.Size(10, 10);
+            this.MinimumSize = new System.Drawing.Size(10, 10);
+            this.Name = "VirtualCursorForm";
             this.Text = "VirtualCursorForm";
+            this.TopMost = true;
+            this.Load += new System.EventHandler(this.VirtualCursorForm_Load);
+            this.ResumeLayout(false);
+
         }
 
         #endregion
