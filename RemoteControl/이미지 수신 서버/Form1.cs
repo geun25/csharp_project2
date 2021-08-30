@@ -32,7 +32,7 @@ namespace 이미지_수신_서버
                 case MsgType.MT_KEYUP:
                     s += "" + e.Key.ToString(); break;
                 case MsgType.MT_M_MOVE:
-                    s+= "" + e.Now.X.ToString() + "" + e.Now.Y.ToString(); break;
+                    s+= "" + e.Now.X.ToString() + "," + e.Now.Y.ToString(); break;
             }
             lbox_km.Items.Add(s);
             lbox_km.SelectedIndex = lbox_km.Items.Count - 1;
@@ -42,14 +42,14 @@ namespace 이미지_수신_서버
         {
             imgcnt++;
             e.Image.Save(string.Format("{0}.bmp", imgcnt));
-            listBox1.Items.Add(imgcnt);
+            lbox_fno.Items.Add(imgcnt);
         }
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (listBox1.SelectedIndex == -1)
+            if (lbox_fno.SelectedIndex == -1)
                 return;
-            int icnt = (int)listBox1.SelectedItem;
+            int icnt = (int)lbox_fno.SelectedItem;
             pictureBox1.ImageLocation = string.Format("{0}.bmp", imgcnt);
         }
 
@@ -58,6 +58,18 @@ namespace 이미지_수신_서버
             get
             {
                 return "127.0.0.1";
+                //// 호스트 이름 구하기
+                //string host_name = Dns.GetHostName();
+                //// 호스트 엔트리 구하기
+                //IPHostEntry host_entry = Dns.GetHostEntry(host_name);
+                //// 호스트 주소 목록 반복
+                //foreach(IPAddress ipaddr in host_entry.AddressList)
+                //{
+                //    // 주소 체계가 InterNetwork일 때
+                //    if (ipaddr.AddressFamily == AddressFamily.InterNetwork)
+                //        return ipaddr.ToString(); // IP 주소 문자열 반환
+                //}
+                //return string.Empty; // 빈 문자열 반환
             }
         }
     }

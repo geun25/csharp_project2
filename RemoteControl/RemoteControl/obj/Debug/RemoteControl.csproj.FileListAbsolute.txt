@@ -13,3 +13,5 @@ C:\Users\jin yeong\.vscode\csharp_project2\RemoteControl\RemoteControl\obj\Debug
 C:\Users\jin yeong\.vscode\csharp_project2\RemoteControl\RemoteControl\obj\Debug\RemoteControl.csproj.CopyComplete
 C:\Users\jin yeong\.vscode\csharp_project2\RemoteControl\RemoteControl\obj\Debug\RemoteControl.exe
 C:\Users\jin yeong\.vscode\csharp_project2\RemoteControl\RemoteControl\obj\Debug\RemoteControl.pdb
+C:\Users\jin yeong\.vscode\csharp_project2\RemoteControl\RemoteControl\obj\Debug\RemoteControl.RemoteClientForm.resources
+C:\Users\jin yeong\.vscode\csharp_project2\RemoteControl\RemoteControl\obj\Debug\RemoteControl.VirtualCursorForm.resources

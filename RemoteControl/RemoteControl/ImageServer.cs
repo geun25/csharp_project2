@@ -1,12 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
-using System.Linq;
 using System.Net;
 using System.Net.Sockets;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace RemoteControl
 {
@@ -31,6 +27,7 @@ namespace RemoteControl
             {
                 return;
             }
+
             try
             {
                 Socket dosock = lis_sock.EndAccept(result);
@@ -60,6 +57,7 @@ namespace RemoteControl
             int len = BitConverter.ToInt32(Ibuf, 0);
             byte[] buffer = new byte[len];
             int trans = 0;
+
             //dosock.Receive(buffer, 0, len, SocketFlags.None);
             while(trans<len)
             {

@@ -8,14 +8,14 @@ using System.Threading.Tasks;
 
 namespace Wind32_Migration
 {
-//    WINUSERAPI
-//VOID
-//WINAPI
-//keybd_event(
-//    _In_ BYTE bVk,
-//    _In_ BYTE bScan,
-//    _In_ DWORD dwFlags,
-//    _In_ ULONG_PTR dwExtraInfo);
+    //    WINUSERAPI
+    //VOID
+    //WINAPI
+    //keybd_event(
+    //    _In_ BYTE bVk,
+    //    _In_ BYTE bScan,
+    //    _In_ DWORD dwFlags,
+    //    _In_ ULONG_PTR dwExtraInfo);
     class Program
     {
         [DllImport("User32.dll")]

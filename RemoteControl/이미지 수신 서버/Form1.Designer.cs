@@ -29,21 +29,21 @@ namespace 이미지_수신_서버
         /// </summary>
         private void InitializeComponent()
         {
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.lbox_fno = new System.Windows.Forms.ListBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lbox_km = new System.Windows.Forms.ListBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // listBox1
+            // lbox_fno
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.ItemHeight = 18;
-            this.listBox1.Location = new System.Drawing.Point(46, 58);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(195, 328);
-            this.listBox1.TabIndex = 0;
-            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
+            this.lbox_fno.FormattingEnabled = true;
+            this.lbox_fno.ItemHeight = 18;
+            this.lbox_fno.Location = new System.Drawing.Point(46, 58);
+            this.lbox_fno.Name = "lbox_fno";
+            this.lbox_fno.Size = new System.Drawing.Size(195, 328);
+            this.lbox_fno.TabIndex = 0;
+            this.lbox_fno.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
             // pictureBox1
             // 
@@ -70,7 +70,7 @@ namespace 이미지_수신_서버
             this.ClientSize = new System.Drawing.Size(800, 821);
             this.Controls.Add(this.lbox_km);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.lbox_fno);
             this.Name = "Form1";
             this.Text = "이미지 + KM 수신 서버";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -81,7 +81,7 @@ namespace 이미지_수신_서버
 
         #endregion
 
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListBox lbox_fno;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ListBox lbox_km;
     }
