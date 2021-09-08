@@ -31,7 +31,7 @@ namespace Tetris
         {
             for(int xx=0; xx<4; xx++)
             {
-                for(int yy=0; y<4; yy++)
+                for(int yy=0; yy<4; yy++)
                 {
                     if(BlockValue.bvals[bn,tn,xx,yy] != 0)
                     {

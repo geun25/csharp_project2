@@ -24,7 +24,8 @@ namespace Tetris
             by = GameRule.BY;
             bwidth = GameRule.B_WIDTH;
             bheight = GameRule.B_HEIGHT;
-            SetClientSizeCore(bx * bwidth, by * bheight);
+            this.SetClientSizeCore(GameRule.BX * GameRule.B_WIDTH, GameRule.BY * GameRule.B_HEIGHT);
+            //SetClientSizeCore(bx * bwidth, by * bheight);
         }
 
         private void Form1_Paint(object sender, PaintEventArgs e)
@@ -161,7 +162,7 @@ namespace Tetris
                     Invalidate();
                 }
                 else
-                    Close();
+                    this.Close();
             }
         }
 
