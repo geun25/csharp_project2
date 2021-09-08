@@ -29,9 +29,9 @@ namespace Tetris
 
         private void Form1_Paint(object sender, PaintEventArgs e)
         {
+            DoubleBuffered = true;
             DrawGradation(e.Graphics); // 좌표
             DrawDiagram(e.Graphics); // 도형
-            DoubleBuffered = true;
             DrawBoard(e.Graphics);
         }
 
@@ -68,7 +68,6 @@ namespace Tetris
                     }
                 }
             }
-
         }
 
         private void DrawGradation(Graphics graphics)
@@ -100,7 +99,7 @@ namespace Tetris
                 st.X = 0;
                 st.Y = cy * bheight;
                 et.X = bx * bwidth;
-                et.Y = st.Y;
+                et.Y = cy * bheight;//st.Y;
                 graphics.DrawLine(Pens.Green, st, et);
             }
         }
@@ -111,21 +110,20 @@ namespace Tetris
             {
                 case Keys.Right: MoveRight(); return;
                 case Keys.Left: MoveLeft(); return;
-                case Keys.Space: MoveSSDown(); return;
+                case Keys.Space: MoveSDown(); return;
                 case Keys.Up: MoveTurn(); return;
                 case Keys.Down: MoveDown(); return;
             }
         }
 
-        private void MoveSSDown()
+        private void MoveSDown()
         {
             while (game.MoveDown())
             {
                 Region rg = MakeRegion(0, -1);
                 Invalidate(rg);
             }
-            game.Next();
-            Invalidate();
+            EndingCheck();
         }
 
         private void MoveTurn()
@@ -145,10 +143,26 @@ namespace Tetris
                 Invalidate(rg);
             }
             else
-            {
-                game.Next();
+                EndingCheck();
+        }
+
+        private void EndingCheck()
+        {
+            if (game.Next())
                 Invalidate();
-            }                
+            else
+            {
+                timer_down.Enabled = false;
+                DialogResult re = MessageBox.Show("다시 시작", "의사", MessageBoxButtons.YesNo);
+                if(re == DialogResult.Yes)
+                {
+                    game.Restart();
+                    timer_down.Enabled = true;
+                    Invalidate();
+                }
+                else
+                    Close();
+            }
         }
 
         private void MoveLeft()
@@ -182,7 +196,7 @@ namespace Tetris
                 {
                     if (BlockValue.bvals[bn, tn, xx, yy] != 0)
                     {
-                        Rectangle rect1 = new Rectangle((now.X + xx) * bwidth, (now.Y + yy) * bheight, bwidth, bheight);
+                        Rectangle rect1 = new Rectangle((now.X + xx) * bwidth + 2, (now.Y + yy) * bheight + 2, bwidth - 4, bheight - 4);
                         Rectangle rect2 = new Rectangle((now.X + cx +  xx) * bwidth, (now.Y + cy + yy) * bheight, bwidth, bheight);
                         Region rg1 = new Region(rect1);
                         Region rg2 = new Region(rect2);
@@ -208,13 +222,13 @@ namespace Tetris
                 {
                     if (BlockValue.bvals[bn, tn, xx, yy] != 0)
                     {
-                        Rectangle rect1 = new Rectangle((now.X + xx) * bwidth, (now.Y + yy) * bheight, bwidth, bheight);
+                        Rectangle rect1 = new Rectangle((now.X + xx) * bwidth + 2, (now.Y + yy) * bheight + 2, bwidth - 4, bheight - 4);
                         Region rg1 = new Region(rect1);
                         region.Union(rg1);
                     }
                     if (BlockValue.bvals[bn, oldtn, xx, yy] != 0)
                     {
-                        Rectangle rect1 = new Rectangle((now.X + xx) * bwidth, (now.Y + yy) * bheight, bwidth, bheight);
+                        Rectangle rect1 = new Rectangle((now.X + xx) * bwidth + 2, (now.Y + yy) * bheight + 2, bwidth - 4, bheight - 4);
                         Region rg1 = new Region(rect1);
                         region.Union(rg1);
                     }

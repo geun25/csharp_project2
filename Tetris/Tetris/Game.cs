@@ -72,7 +72,7 @@ namespace Tetris
                 }
             }
 
-            if(gboard.MoveEnable(now.BlockNum, Turn, now.X-1, now.Y))
+            if(gboard.MoveEnable(now.BlockNum, Turn, now.X - 1, now.Y))
             {
                 now.MoveLeft();
                 return true;
@@ -88,7 +88,7 @@ namespace Tetris
                 {
                     if (BlockValue.bvals[now.BlockNum, Turn, xx, yy] != 0)
                     {
-                        if (now.X + xx + 1 >= GameRule.BX)
+                        if ((now.X + xx + 1) >= GameRule.BX)
                             return false;
                     }
                 }
@@ -110,7 +110,7 @@ namespace Tetris
                 {
                     if (BlockValue.bvals[now.BlockNum, Turn, xx, yy] != 0)
                     {
-                        if (now.Y + yy + 1 >= GameRule.BY)
+                        if ((now.Y + yy + 1) >= GameRule.BY)
                         {
                             gboard.Store(now.BlockNum, Turn, now.X, now.Y);
                             return false;
@@ -150,9 +150,15 @@ namespace Tetris
             return false;
         }
 
-        internal void Next()
+        internal bool Next()
         {
             now.Reset();
+            return gboard.MoveEnable(now.BlockNum, Turn, now.X, now.Y); // 게임이 끝날 조건
+        }
+
+        internal void Restart()
+        {
+            gboard.ClearBoard();
         }
     }
 }
