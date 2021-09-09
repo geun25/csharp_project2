@@ -36,8 +36,11 @@ namespace Tetris
         internal void Reset()
         {
             Random random = new Random();
+            
+            //Start 포지션
             X = GameRule.SX;
             Y = GameRule.SY;
+
             Turn = random.Next() % 4;
             BlockNum = random.Next() % 7;
         }

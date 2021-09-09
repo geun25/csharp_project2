@@ -1,9 +1,8 @@
-﻿using System;
-
-namespace Tetris
+﻿namespace Tetris
 {
     class Board
     {
+        #region 단일체
         internal static Board GameBoard
         {
             get;
@@ -14,10 +13,12 @@ namespace Tetris
         {
             GameBoard = new Board();
         }
+
         Board()
         {
         }
-        
+        #endregion 
+
         int[,] board = new int[GameRule.BX, GameRule.BY];
         internal int this[int x, int y] // 보드의 특정 영역이 어떤 값인지 확인
         {
@@ -36,7 +37,9 @@ namespace Tetris
                     if(BlockValue.bvals[bn,tn,xx,yy] != 0)
                     {
                         if(board[x+xx, y+yy] != 0)
+                        {
                             return false;
+                        }
                     }
                 }
             }
@@ -50,7 +53,9 @@ namespace Tetris
                 for (int yy = 0; y < 4; yy++)
                 {
                     if(((x+xx) >= 0) && (x+xx<GameRule.BX) && (y+yy >= 0) && (y+yy < GameRule.BY))
+                    {
                         board[x + xx, y + yy] += BlockValue.bvals[bn, turn, xx, yy];
+                    }
                 }
             }
             CheckLines(y + 3); // 꽉 차게 되면 밑에서부터 지워나가야 함.
@@ -88,7 +93,9 @@ namespace Tetris
             for(int xx = 0; xx < GameRule.BX; xx++)
             {
                 if (board[xx, y] == 0) // 비어있는 공간이 하나라도 존재할 경우
+                {
                     return false;
+                }
             }
             return true;
         }

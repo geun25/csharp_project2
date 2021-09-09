@@ -11,7 +11,9 @@ namespace Tetris
             get
             {
                 if (now == null)
+                {
                     return new Point(0, 0);
+                }
                 return new Point(now.X, now.Y);
             }
         }
@@ -67,7 +69,9 @@ namespace Tetris
                     if(BlockValue.bvals[now.BlockNum, Turn, xx, yy] != 0)
                     {
                         if (now.X + xx <= 0)
+                        {
                             return false;
+                        }
                     }
                 }
             }
@@ -89,7 +93,9 @@ namespace Tetris
                     if (BlockValue.bvals[now.BlockNum, Turn, xx, yy] != 0)
                     {
                         if ((now.X + xx + 1) >= GameRule.BX)
+                        {
                             return false;
+                        }
                     }
                 }
             }
@@ -134,10 +140,12 @@ namespace Tetris
             {
                 for (int yy = 0; yy < 4; yy++)
                 {
-                    if (BlockValue.bvals[now.BlockNum, (Turn+1)%4, xx, yy] != 0)
+                    if (BlockValue.bvals[now.BlockNum, (Turn+1) % 4, xx, yy] != 0)
                     {
                         if (((now.X + xx) < 0) || ((now.X + xx) >= GameRule.BX) || ((now.Y + yy) >= GameRule.BY))
+                        {
                             return false;
+                        }
                     }
                 }
             }

@@ -24,13 +24,12 @@ namespace Tetris
             by = GameRule.BY;
             bwidth = GameRule.B_WIDTH;
             bheight = GameRule.B_HEIGHT;
-            this.SetClientSizeCore(GameRule.BX * GameRule.B_WIDTH, GameRule.BY * GameRule.B_HEIGHT);
-            //SetClientSizeCore(bx * bwidth, by * bheight);
+            SetClientSizeCore(bx * bwidth, by * bheight);         
         }
 
         private void Form1_Paint(object sender, PaintEventArgs e)
         {
-            DoubleBuffered = true;
+            DoubleBuffered = true; // 깜빡임 제거
             DrawGradation(e.Graphics); // 좌표
             DrawDiagram(e.Graphics); // 도형
             DrawBoard(e.Graphics);
@@ -100,7 +99,7 @@ namespace Tetris
                 st.X = 0;
                 st.Y = cy * bheight;
                 et.X = bx * bwidth;
-                et.Y = cy * bheight;//st.Y;
+                et.Y = st.Y;
                 graphics.DrawLine(Pens.Green, st, et);
             }
         }
@@ -140,17 +139,21 @@ namespace Tetris
         {
             if (game.MoveDown())
             {
-                Region rg = MakeRegion(0, -1);
+                Region rg = MakeRegion(0, -1); // 한칸 밑으로 이동했으니 cy좌표 1감소
                 Invalidate(rg);
             }
             else
+            {
                 EndingCheck();
+            }
         }
 
         private void EndingCheck()
         {
             if (game.Next())
+            { 
                 Invalidate();
+            }
             else
             {
                 timer_down.Enabled = false;
@@ -162,7 +165,9 @@ namespace Tetris
                     Invalidate();
                 }
                 else
-                    this.Close();
+                {
+                    Close();
+                }
             }
         }
 
@@ -197,7 +202,7 @@ namespace Tetris
                 {
                     if (BlockValue.bvals[bn, tn, xx, yy] != 0)
                     {
-                        Rectangle rect1 = new Rectangle((now.X + xx) * bwidth + 2, (now.Y + yy) * bheight + 2, bwidth - 4, bheight - 4);
+                        Rectangle rect1 = new Rectangle((now.X + xx) * bwidth, (now.Y + yy) * bheight, bwidth, bheight);
                         Rectangle rect2 = new Rectangle((now.X + cx +  xx) * bwidth, (now.Y + cy + yy) * bheight, bwidth, bheight);
                         Region rg1 = new Region(rect1);
                         Region rg2 = new Region(rect2);
@@ -214,7 +219,7 @@ namespace Tetris
             Point now = game.NowPosition;
             int bn = game.BlockNum;
             int tn = game.Turn;
-            int oldtn = (tn + 3) % 4;
+            int oldtn = (tn + 3) % 4; // Turn을 하기전
 
             Region region = new Region();
             for (int xx = 0; xx < 4; xx++)
