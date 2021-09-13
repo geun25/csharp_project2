@@ -1,0 +1,15 @@
+C:\Users\jin yeong\.vscode\csharp_project2\Wafer Coating Simulation\Wafer 예광탄\bin\Debug\Wafer 예광탄.exe.config
+C:\Users\jin yeong\.vscode\csharp_project2\Wafer Coating Simulation\Wafer 예광탄\bin\Debug\Wafer 예광탄.exe
+C:\Users\jin yeong\.vscode\csharp_project2\Wafer Coating Simulation\Wafer 예광탄\bin\Debug\Wafer 예광탄.pdb
+C:\Users\jin yeong\.vscode\csharp_project2\Wafer Coating Simulation\Wafer 예광탄\obj\Debug\Wafer 예광탄.csproj.AssemblyReference.cache
+C:\Users\jin yeong\.vscode\csharp_project2\Wafer Coating Simulation\Wafer 예광탄\obj\Debug\Wafer_예광탄.Form1.resources
+C:\Users\jin yeong\.vscode\csharp_project2\Wafer Coating Simulation\Wafer 예광탄\obj\Debug\Wafer_예광탄.Properties.Resources.resources
+C:\Users\jin yeong\.vscode\csharp_project2\Wafer Coating Simulation\Wafer 예광탄\obj\Debug\Wafer 예광탄.csproj.GenerateResource.cache
+C:\Users\jin yeong\.vscode\csharp_project2\Wafer Coating Simulation\Wafer 예광탄\obj\Debug\Wafer 예광탄.csproj.CoreCompileInputs.cache
+C:\Users\jin yeong\.vscode\csharp_project2\Wafer Coating Simulation\Wafer 예광탄\obj\Debug\Wafer 예광탄.exe
+C:\Users\jin yeong\.vscode\csharp_project2\Wafer Coating Simulation\Wafer 예광탄\obj\Debug\Wafer 예광탄.pdb
+C:\Users\jin yeong\.vscode\csharp_project2\Wafer Coating Simulation\Wafer 예광탄\bin\Debug\WaferLineLib.dll
+C:\Users\jin yeong\.vscode\csharp_project2\Wafer Coating Simulation\Wafer 예광탄\bin\Debug\WaferLineLib.pdb
+C:\Users\jin yeong\.vscode\csharp_project2\Wafer Coating Simulation\Wafer 예광탄\obj\Debug\Wafer 예광탄.csproj.CopyComplete
+C:\Users\jin yeong\.vscode\csharp_project2\Wafer Coating Simulation\Wafer 예광탄\bin\Debug\WaferLineControlLib.dll
+C:\Users\jin yeong\.vscode\csharp_project2\Wafer Coating Simulation\Wafer 예광탄\bin\Debug\WaferLineControlLib.pdb
