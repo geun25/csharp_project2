@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>WaferLineLib</name>
+    </assembly>
+    <members>
+        <member name="T:WaferLineLib.Wafer">
+            <summary>
+            Wafer 클래스
+            </summary>
+        </member>
+        <member name="M:WaferLineLib.Wafer.#ctor">
+            <summary>
+            기본 생성자
+            </summary>
+        </member>
+        <member name="P:WaferLineLib.Wafer.Now">
+            <summary>
+            현재 코팅할 cell 번호 - 가져오기
+            </summary>
+        </member>
+        <member name="M:WaferLineLib.Wafer.Increment">
+            <summary>
+            코팅할 cell 번호 증가
+            </summary>
+            <returns>증가 성공 여부</returns>
+        </member>
+        <member name="M:WaferLineLib.Wafer.Coating(System.Int32)">
+            <summary>
+             코팅 메서드
+            </summary>
+            <param name="quality">품질 수준</param>
+        </member>
+        <member name="P:WaferLineLib.Wafer.Item(System.Int32)">
+            <summary>
+            특정 cell의 품질 수준 인덱서 - 가져오기
+            </summary>
+            <param name="index">cell의 인덱스</param>
+            <returns>특정 cell의 품질</returns>
+        </member>
+        <member name="P:WaferLineLib.Wafer.Quality">
+            <summary>
+            평균 품질 - 가져오기
+            </summary>
+        </member>
+        <member name="M:WaferLineLib.Wafer.ToString">
+            <summary>
+            ToString 메서드 재정의
+            </summary>
+            <returns>Wafer 번호와 평균 품질</returns>
+        </member>
+    </members>
+</doc>

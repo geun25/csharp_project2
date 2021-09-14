@@ -28,7 +28,7 @@ namespace Wafer_예광탄
         {
             if(Wafer == null)
                 Wafer = new Wafer();
-            Wafer.Coating(rand.Next(70, 100));
+            Wafer.Coating(rand.Next(70, 100)); // 품질 수준 70% ~ 100% 랜덤값
             if (Wafer.Increment() == false)
             {
                 tm_coating.Enabled = false;

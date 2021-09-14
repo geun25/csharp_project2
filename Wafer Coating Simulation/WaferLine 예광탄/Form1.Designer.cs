@@ -60,8 +60,8 @@ namespace WaferLine_예광탄
             this.cb_awafer = new System.Windows.Forms.ComboBox();
             this.pn_awafer = new WaferLineControlLib.WaferPanel();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.tm_coating = new System.Windows.Forms.Timer(this.components);
             this.ts_lb = new System.Windows.Forms.ToolStripStatusLabel();
+            this.tm_coating = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.tbar_wafer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbar_pr)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tbar_drop)).BeginInit();
@@ -94,6 +94,7 @@ namespace WaferLine_예광탄
             this.tbar_wafer.Name = "tbar_wafer";
             this.tbar_wafer.Size = new System.Drawing.Size(104, 69);
             this.tbar_wafer.TabIndex = 2;
+            this.tbar_wafer.Scroll += new System.EventHandler(this.tbar_wafer_Scroll);
             // 
             // btn_wafer
             // 
@@ -103,6 +104,7 @@ namespace WaferLine_예광탄
             this.btn_wafer.TabIndex = 4;
             this.btn_wafer.Text = "투입";
             this.btn_wafer.UseVisualStyleBackColor = true;
+            this.btn_wafer.Click += new System.EventHandler(this.btn_wafer_Click);
             // 
             // btn_pr
             // 
@@ -112,6 +114,7 @@ namespace WaferLine_예광탄
             this.btn_pr.TabIndex = 8;
             this.btn_pr.Text = "투입";
             this.btn_pr.UseVisualStyleBackColor = true;
+            this.btn_pr.Click += new System.EventHandler(this.btn_pr_Click);
             // 
             // tbar_pr
             // 
@@ -120,6 +123,7 @@ namespace WaferLine_예광탄
             this.tbar_pr.Name = "tbar_pr";
             this.tbar_pr.Size = new System.Drawing.Size(104, 69);
             this.tbar_pr.TabIndex = 7;
+            this.tbar_pr.Scroll += new System.EventHandler(this.tbar_pr_Scroll);
             // 
             // lb_pr
             // 
@@ -166,6 +170,7 @@ namespace WaferLine_예광탄
             this.tbar_drop.Size = new System.Drawing.Size(104, 69);
             this.tbar_drop.TabIndex = 14;
             this.tbar_drop.Value = 20;
+            this.tbar_drop.Scroll += new System.EventHandler(this.tbar_drop_Scroll);
             // 
             // lb_drop
             // 
@@ -185,6 +190,7 @@ namespace WaferLine_예광탄
             this.tbar_spin.Size = new System.Drawing.Size(104, 69);
             this.tbar_spin.TabIndex = 12;
             this.tbar_spin.Value = 1000;
+            this.tbar_spin.Scroll += new System.EventHandler(this.tbar_spin_Scroll);
             // 
             // lb_spin
             // 
@@ -209,7 +215,7 @@ namespace WaferLine_예광탄
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(831, 68);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(59, 27);
+            this.label6.Size = new System.Drawing.Size(39, 18);
             this.label6.TabIndex = 15;
             this.label6.Text = "rpm";
             // 
@@ -238,6 +244,7 @@ namespace WaferLine_예광탄
             this.pn_wafer.Name = "pn_wafer";
             this.pn_wafer.Size = new System.Drawing.Size(97, 200);
             this.pn_wafer.TabIndex = 19;
+            this.pn_wafer.Paint += new System.Windows.Forms.PaintEventHandler(this.pn_wafer_Paint);
             // 
             // pn_pr
             // 
@@ -246,6 +253,7 @@ namespace WaferLine_예광탄
             this.pn_pr.Name = "pn_pr";
             this.pn_pr.Size = new System.Drawing.Size(97, 200);
             this.pn_pr.TabIndex = 22;
+            this.pn_pr.Paint += new System.Windows.Forms.PaintEventHandler(this.pn_pr_Paint);
             // 
             // lb_pcnt
             // 
@@ -261,7 +269,7 @@ namespace WaferLine_예광탄
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(229, 230);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(93, 27);
+            this.label9.Size = new System.Drawing.Size(62, 18);
             this.label9.TabIndex = 20;
             this.label9.Text = "코팅액";
             // 
@@ -273,6 +281,7 @@ namespace WaferLine_예광탄
             this.btn_start.TabIndex = 23;
             this.btn_start.Text = "시작";
             this.btn_start.UseVisualStyleBackColor = true;
+            this.btn_start.Click += new System.EventHandler(this.btn_start_Click);
             // 
             // pn_npr
             // 
@@ -280,6 +289,7 @@ namespace WaferLine_예광탄
             this.pn_npr.Name = "pn_npr";
             this.pn_npr.Size = new System.Drawing.Size(65, 57);
             this.pn_npr.TabIndex = 24;
+            this.pn_npr.Paint += new System.Windows.Forms.PaintEventHandler(this.pn_npr_Paint);
             // 
             // pn_nwafer
             // 
@@ -294,16 +304,16 @@ namespace WaferLine_예광탄
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(635, 230);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(126, 27);
+            this.label8.Size = new System.Drawing.Size(84, 18);
             this.label8.TabIndex = 26;
             this.label8.Text = "Wafer(후)";
             // 
             // lb_awcnt
             // 
             this.lb_awcnt.AutoSize = true;
-            this.lb_awcnt.Location = new System.Drawing.Point(806, 230);
+            this.lb_awcnt.Location = new System.Drawing.Point(744, 230);
             this.lb_awcnt.Name = "lb_awcnt";
-            this.lb_awcnt.Size = new System.Drawing.Size(27, 27);
+            this.lb_awcnt.Size = new System.Drawing.Size(18, 18);
             this.lb_awcnt.TabIndex = 27;
             this.lb_awcnt.Text = "0";
             // 
@@ -314,6 +324,7 @@ namespace WaferLine_예광탄
             this.cb_awafer.Name = "cb_awafer";
             this.cb_awafer.Size = new System.Drawing.Size(157, 26);
             this.cb_awafer.TabIndex = 28;
+            this.cb_awafer.SelectedIndexChanged += new System.EventHandler(this.cb_awafer_SelectedIndexChanged);
             // 
             // pn_awafer
             // 
@@ -339,6 +350,10 @@ namespace WaferLine_예광탄
             this.ts_lb.Name = "ts_lb";
             this.ts_lb.Size = new System.Drawing.Size(202, 25);
             this.ts_lb.Text = "상태변화를 나타냅니다.";
+            // 
+            // tm_coating
+            // 
+            this.tm_coating.Tick += new System.EventHandler(this.tm_coating_Tick);
             // 
             // Form1
             // 
