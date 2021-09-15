@@ -48,11 +48,11 @@
     <Compile Include="DPanel.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="UserControl1.cs">
+    <Compile Include="WaferLineControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControl1.Designer.cs">
-      <DependentUpon>UserControl1.cs</DependentUpon>
+    <Compile Include="WaferLineControl.Designer.cs">
+      <DependentUpon>WaferLineControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
@@ -62,6 +62,11 @@
       <Project>{0b3aeb99-8dce-4480-82e0-4ae3c43213e7}</Project>
       <Name>WaferLineLib</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="WaferLineControl.resx">
+      <DependentUpon>WaferLineControl.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
