@@ -49,5 +49,32 @@
             </summary>
             <returns>Wafer 번호와 평균 품질</returns>
         </member>
+        <member name="P:WaferLineLib.WaferLine.No">
+            <summary>
+            Wafer 구분자
+            </summary>
+        </member>
+        <member name="P:WaferLineLib.WaferLine.Now">
+            <summary>
+            현재 코팅하고 있는 wafer
+            </summary>
+        </member>
+        <member name="M:WaferLineLib.WaferLine.InWafer(System.Int32)">
+            <summary>
+            원하는 만큼 wafer 투입
+            </summary>
+            <param name="wcnt"></param>
+            <returns></returns>
+        </member>
+        <member name="P:WaferLineLib.WaferLine.PCnt">
+            <summary>
+            현재 코딩액의 개수
+            </summary>
+        </member>
+        <member name="P:WaferLineLib.WaferLine.NPcnt">
+            <summary>
+            코팅 가능한 cell 개수
+            </summary>
+        </member>
     </members>
 </doc>
