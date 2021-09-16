@@ -1,0 +1,17 @@
+C:\Users\jin yeong\.vscode\csharp_project2\Wafer Coating Simulation\WaferLine Factory Simulation\bin\Debug\WaferLine Factory Simulation.exe.config
+C:\Users\jin yeong\.vscode\csharp_project2\Wafer Coating Simulation\WaferLine Factory Simulation\bin\Debug\WaferLine Factory Simulation.exe
+C:\Users\jin yeong\.vscode\csharp_project2\Wafer Coating Simulation\WaferLine Factory Simulation\bin\Debug\WaferLine Factory Simulation.pdb
+C:\Users\jin yeong\.vscode\csharp_project2\Wafer Coating Simulation\WaferLine Factory Simulation\bin\Debug\WaferLineControlLib.dll
+C:\Users\jin yeong\.vscode\csharp_project2\Wafer Coating Simulation\WaferLine Factory Simulation\bin\Debug\WaferLineLib.dll
+C:\Users\jin yeong\.vscode\csharp_project2\Wafer Coating Simulation\WaferLine Factory Simulation\bin\Debug\WaferLineControlLib.pdb
+C:\Users\jin yeong\.vscode\csharp_project2\Wafer Coating Simulation\WaferLine Factory Simulation\bin\Debug\WaferLineLib.pdb
+C:\Users\jin yeong\.vscode\csharp_project2\Wafer Coating Simulation\WaferLine Factory Simulation\bin\Debug\WaferLineLib.xml
+C:\Users\jin yeong\.vscode\csharp_project2\Wafer Coating Simulation\WaferLine Factory Simulation\obj\Debug\WaferLine Factory Simulation.csproj.AssemblyReference.cache
+C:\Users\jin yeong\.vscode\csharp_project2\Wafer Coating Simulation\WaferLine Factory Simulation\obj\Debug\WaferLine_Factory_Simulation.MainForm.resources
+C:\Users\jin yeong\.vscode\csharp_project2\Wafer Coating Simulation\WaferLine Factory Simulation\obj\Debug\WaferLine_Factory_Simulation.Properties.Resources.resources
+C:\Users\jin yeong\.vscode\csharp_project2\Wafer Coating Simulation\WaferLine Factory Simulation\obj\Debug\WaferLine_Factory_Simulation.WaferLineForm.resources
+C:\Users\jin yeong\.vscode\csharp_project2\Wafer Coating Simulation\WaferLine Factory Simulation\obj\Debug\WaferLine Factory Simulation.csproj.GenerateResource.cache
+C:\Users\jin yeong\.vscode\csharp_project2\Wafer Coating Simulation\WaferLine Factory Simulation\obj\Debug\WaferLine Factory Simulation.csproj.CoreCompileInputs.cache
+C:\Users\jin yeong\.vscode\csharp_project2\Wafer Coating Simulation\WaferLine Factory Simulation\obj\Debug\WaferLine Factory Simulation.csproj.CopyComplete
+C:\Users\jin yeong\.vscode\csharp_project2\Wafer Coating Simulation\WaferLine Factory Simulation\obj\Debug\WaferLine Factory Simulation.exe
+C:\Users\jin yeong\.vscode\csharp_project2\Wafer Coating Simulation\WaferLine Factory Simulation\obj\Debug\WaferLine Factory Simulation.pdb
