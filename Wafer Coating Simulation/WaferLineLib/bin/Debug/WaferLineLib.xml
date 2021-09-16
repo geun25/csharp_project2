@@ -49,11 +49,6 @@
             </summary>
             <returns>Wafer 번호와 평균 품질</returns>
         </member>
-        <member name="P:WaferLineLib.WaferLine.No">
-            <summary>
-            Wafer 구분자
-            </summary>
-        </member>
         <member name="P:WaferLineLib.WaferLine.Now">
             <summary>
             현재 코팅하고 있는 wafer

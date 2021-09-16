@@ -42,6 +42,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddPrEventArgs.cs" />
+    <Compile Include="AddWaferEventArgs.cs" />
+    <Compile Include="EndCoatingEventArgs.cs" />
+    <Compile Include="EndPrEventArgs.cs" />
+    <Compile Include="SetDropEventArgs.cs" />
+    <Compile Include="SetSpinEventArgs.cs" />
     <Compile Include="Wafer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="WaferLine.cs" />

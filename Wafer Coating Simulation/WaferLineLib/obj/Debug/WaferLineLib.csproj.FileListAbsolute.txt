@@ -4,3 +4,4 @@ C:\Users\jin yeong\.vscode\csharp_project2\Wafer Coating Simulation\WaferLineLib
 C:\Users\jin yeong\.vscode\csharp_project2\Wafer Coating Simulation\WaferLineLib\obj\Debug\WaferLineLib.dll
 C:\Users\jin yeong\.vscode\csharp_project2\Wafer Coating Simulation\WaferLineLib\obj\Debug\WaferLineLib.pdb
 C:\Users\jin yeong\.vscode\csharp_project2\Wafer Coating Simulation\WaferLineLib\bin\Debug\WaferLineLib.xml
+C:\Users\jin yeong\.vscode\csharp_project2\Wafer Coating Simulation\WaferLineLib\obj\Debug\WaferLineLib.csproj.AssemblyReference.cache

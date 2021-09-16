@@ -6,9 +6,13 @@ namespace WaferLineLib
 {
     public class WaferLine : IEnumerable<Wafer>
     {
-        /// <summary>
-        /// Wafer 구분자
-        /// </summary>
+        public event AddWaferEventHandler AddedWafer;
+        public event AddPrEventHandler AddedPr;
+        public event SetSpinEventHandler SettedSpin;
+        public event SetDropEventHandler SettedDrop;
+        public event EndPrEventHandler EndedPr;
+        public event EndCoatingEventHandler EndedCoating;
+
         public int No
         {
             get;
@@ -89,13 +93,13 @@ namespace WaferLineLib
         {
             int avail = 200 - BWCnt; // 추가 가능한 wafer 개수
             if (wcnt > avail)
-            {
                 wcnt = avail;
-            }
             for (int i = 0; i < wcnt; i++)
             {
                 bwafers.Add(new Wafer());
             }
+            if(AddedWafer != null)
+                AddedWafer(this, new AddWaferEventArgs(No, BWCnt));
             return bwafers.Count; // 추가한 후 wafer 개수
         }
 
@@ -133,17 +137,23 @@ namespace WaferLineLib
             if (pcnt > avail)
                 pcnt = avail;
             PCnt += pcnt;
+            if(AddedPr != null)
+                AddedPr(this, new AddPrEventArgs(No, PCnt));
             return PCnt;
         }
 
         public void SetSpin(int spin)
         {
             Spin = spin;
+            if(SettedSpin != null)
+                SettedSpin(this, new SetSpinEventArgs(No, spin));
         }
 
         public void SetDrop(int drop)
         {
             Drop = drop;
+            if(SettedDrop != null)
+                SettedDrop(this, new SetDropEventArgs(No, drop));
         }
 
         Random rand = new Random();
@@ -151,6 +161,8 @@ namespace WaferLineLib
         {
             if (nowp == 0) // 현재 사용할 코팅액이 있는지 확인
             {
+                if (EndedPr == null)
+                    EndedPr(this, new EndPrEventArgs(No));
                 if (PCnt == 0) // 남은 코팅액이 있는지 확인
                     return false;
                 nowp = 1000;
@@ -169,6 +181,8 @@ namespace WaferLineLib
             {
                 awafers.Add(nwafer);
                 nwafer = null;
+                if (EndedCoating != null)
+                    EndedCoating(this, new EndCoatingEventArgs(No, BWCnt, AWCnt));
             }
             return true;
         }
