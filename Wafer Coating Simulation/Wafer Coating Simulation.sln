@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WaferLineControlLib", "Wafe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WaferLine 예광탄", "WaferLine 예광탄\WaferLine 예광탄.csproj", "{C6BAF304-4EF9-42DE-B882-5CD25B728CF8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WaferLine Factory Simulation", "WaferLine Factory Simulation\WaferLine Factory Simulation.csproj", "{2A69E0C0-C4F7-4537-AB11-7423262BB20D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{C6BAF304-4EF9-42DE-B882-5CD25B728CF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C6BAF304-4EF9-42DE-B882-5CD25B728CF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C6BAF304-4EF9-42DE-B882-5CD25B728CF8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A69E0C0-C4F7-4537-AB11-7423262BB20D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A69E0C0-C4F7-4537-AB11-7423262BB20D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A69E0C0-C4F7-4537-AB11-7423262BB20D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A69E0C0-C4F7-4537-AB11-7423262BB20D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
