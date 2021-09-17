@@ -22,18 +22,22 @@ namespace WaferLine_Factory_Simulation
             WaferLine wl = new WaferLine(no);
             string[] sitems = new string[] { no.ToString(), "0", "0" };
             ListViewItem lvi = new ListViewItem(sitems);
-            lvi.Tag = wl;
+            lvi.Tag = wl; // wafer번호를 보관
             lv_line.Items.Add(lvi);
             cb_line.Items.Add(wl);
             lb_next_no.Text = next_lineno.ToString();
 
             WaferLineForm wlf = new WaferLineForm(wl);
+
+            #region 이벤트 핸들러 추가
             wlf.EndedCoating += Wlf_EndedCoating;
             wlf.AddedWafer += Wlf_AddedWafer;
             wlf.AddedPr += Wlf_AddedPr;
             wlf.SettedSpin += Wlf_SettedSpin;
             wlf.SettedDrop += Wlf_SettedDrop;
             wlf.EndedPr += Wlf_EndedPr;
+            #endregion
+
             wdic.Add(no, wlf);
         }
 
@@ -51,6 +55,16 @@ namespace WaferLine_Factory_Simulation
         {
             ChangeStatusSelectedWaferLine(e.No);
         }
+       
+        private void Wlf_SettedSpin(object sender, SetSpinEventArgs e)
+        {
+            ChangeStatusSelectedWaferLine(e.No);
+        }
+
+        private void Wlf_AddedPr(object sender, AddPrEventArgs e)
+        {
+            ChangeStatusSelectedWaferLine(e.No);
+        }
 
         private void ChangeStatusSelectedWaferLine(int no)
         {
@@ -64,22 +78,12 @@ namespace WaferLine_Factory_Simulation
             }
         }
 
-        private void Wlf_SettedSpin(object sender, SetSpinEventArgs e)
-        {
-            ChangeStatusSelectedWaferLine(e.No);
-        }
-
-        private void Wlf_AddedPr(object sender, AddPrEventArgs e)
-        {
-            ChangeStatusSelectedWaferLine(e.No);
-        }
-
         private void Wlf_AddedWafer(object sender, AddWaferEventArgs e)
         {
             ChangeStatusWaferLine(e.No);
         }
 
-        private void ChangeStatusWaferLine(int no)
+        void ChangeStatusWaferLine(int no)
         {
             ListViewItem lvi = lv_line.Items[no - 1];
             WaferLine wl = lvi.Tag as WaferLine;

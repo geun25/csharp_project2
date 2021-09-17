@@ -6,12 +6,14 @@ namespace WaferLineLib
 {
     public class WaferLine : IEnumerable<Wafer>
     {
+        #region 이벤트 정의
         public event AddWaferEventHandler AddedWafer;
         public event AddPrEventHandler AddedPr;
         public event SetSpinEventHandler SettedSpin;
         public event SetDropEventHandler SettedDrop;
         public event EndPrEventHandler EndedPr;
         public event EndCoatingEventHandler EndedCoating;
+        #endregion
 
         public int No
         {
@@ -161,7 +163,7 @@ namespace WaferLineLib
         {
             if (nowp == 0) // 현재 사용할 코팅액이 있는지 확인
             {
-                if (EndedPr == null)
+                if (EndedPr != null)
                     EndedPr(this, new EndPrEventArgs(No));
                 if (PCnt == 0) // 남은 코팅액이 있는지 확인
                     return false;

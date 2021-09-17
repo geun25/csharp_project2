@@ -6,12 +6,14 @@ namespace WaferLine_Factory_Simulation
 {
     public partial class WaferLineForm : Form
     {
+        #region 이벤트 정의
         public event AddWaferEventHandler AddedWafer;
         public event AddPrEventHandler AddedPr;
         public event SetSpinEventHandler SettedSpin;
         public event SetDropEventHandler SettedDrop;
         public event EndPrEventHandler EndedPr;
         public event EndCoatingEventHandler EndedCoating;
+        #endregion
 
         public WaferLine WLine
         {
@@ -29,12 +31,15 @@ namespace WaferLine_Factory_Simulation
         {
             InitializeComponent();
             WLine = wl;
+
+            #region 이벤트 핸들러 추가
             WLine.AddedWafer += WLine_AddedWafer;
             WLine.AddedPr += WLine_AddedPr;
             WLine.EndedCoating += WLine_EndedCoating;
             WLine.EndedPr += WLine_EndedPr;
             WLine.SettedSpin += WLine_SettedSpin;
             WLine.SettedDrop += WLine_SettedDrop;
+            #endregion
         }
 
         private void WLine_SettedDrop(object sender, SetDropEventArgs e)
@@ -81,8 +86,8 @@ namespace WaferLine_Factory_Simulation
 
         private void WaferLineForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-            this.Hide();
-            e.Cancel = true;
+            this.Hide(); // 창을 숨기는 역할   
+            e.Cancel = true; // 프로그램이 완전히 끝나지 않고 백그라운드에서 실행되게 함.
         }
     }
 }

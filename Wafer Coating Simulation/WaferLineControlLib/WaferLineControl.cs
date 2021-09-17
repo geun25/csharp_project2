@@ -68,7 +68,7 @@ namespace WaferLineControlLib
             if (pcnt > (tbar_pr.Maximum - wl.PCnt))
                 pcnt = tbar_pr.Maximum - wl.PCnt;
 
-            wl.InWafer(pcnt);
+            wl.InPr(pcnt);
             tbar_pr.Value = 0;
             lb_pr.Text = "0";
             pn_pr.Invalidate();
