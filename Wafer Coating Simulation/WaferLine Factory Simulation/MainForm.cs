@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
+using WaferLineCommLib;
 using WaferLineLib;
 
 namespace WaferLine_Factory_Simulation
@@ -119,6 +120,11 @@ namespace WaferLine_Factory_Simulation
         {
             pn_awafer.Wafer = cb_awafer.SelectedItem as Wafer;
             pn_awafer.Invalidate();
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            cb_ip.DataSource = MyNetwork.Addresses;
         }
     }
 }

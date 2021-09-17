@@ -92,6 +92,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\WaferLineCommLib\WaferLineCommLib.csproj">
+      <Project>{7a6efd31-05a2-4772-9e0c-c28bd5b20995}</Project>
+      <Name>WaferLineCommLib</Name>
+    </ProjectReference>
     <ProjectReference Include="..\WaferLineControlLib\WaferLineControlLib.csproj">
       <Project>{DCFD2652-E4ED-45D4-990A-3E76B3E4C2AE}</Project>
       <Name>WaferLineControlLib</Name>

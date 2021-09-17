@@ -301,6 +301,7 @@ namespace WaferLine_Factory_Simulation
             this.Controls.Add(this.cb_ip);
             this.Name = "MainForm";
             this.Text = "WaferLine Factory MainForm";
+            this.Load += new System.EventHandler(this.MainForm_Load);
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);

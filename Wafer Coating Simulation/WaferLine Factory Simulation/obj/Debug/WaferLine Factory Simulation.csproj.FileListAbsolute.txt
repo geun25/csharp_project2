@@ -15,3 +15,5 @@ C:\Users\jin yeong\.vscode\csharp_project2\Wafer Coating Simulation\WaferLine Fa
 C:\Users\jin yeong\.vscode\csharp_project2\Wafer Coating Simulation\WaferLine Factory Simulation\obj\Debug\WaferLine Factory Simulation.csproj.CopyComplete
 C:\Users\jin yeong\.vscode\csharp_project2\Wafer Coating Simulation\WaferLine Factory Simulation\obj\Debug\WaferLine Factory Simulation.exe
 C:\Users\jin yeong\.vscode\csharp_project2\Wafer Coating Simulation\WaferLine Factory Simulation\obj\Debug\WaferLine Factory Simulation.pdb
+C:\Users\jin yeong\.vscode\csharp_project2\Wafer Coating Simulation\WaferLine Factory Simulation\bin\Debug\WaferLineCommLib.dll
+C:\Users\jin yeong\.vscode\csharp_project2\Wafer Coating Simulation\WaferLine Factory Simulation\bin\Debug\WaferLineCommLib.pdb
