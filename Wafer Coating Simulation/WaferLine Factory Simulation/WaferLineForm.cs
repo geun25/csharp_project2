@@ -81,7 +81,7 @@ namespace WaferLine_Factory_Simulation
         private void WaferLineForm_Load(object sender, EventArgs e)
         {
             lb_no.Text = No.ToString();
-            wlc.Line = WLine;
+            wlc.Line = WLine; // 어느 WaferLine과 관련있는지 설정
         }
 
         private void WaferLineForm_FormClosing(object sender, FormClosingEventArgs e)

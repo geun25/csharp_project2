@@ -23,7 +23,7 @@ namespace WaferLine_Factory_Simulation
             WaferLine wl = new WaferLine(no);
             string[] sitems = new string[] { no.ToString(), "0", "0" };
             ListViewItem lvi = new ListViewItem(sitems);
-            lvi.Tag = wl; // wafer번호를 보관
+            lvi.Tag = wl; // wafer No를 보관
             lv_line.Items.Add(lvi);
             cb_line.Items.Add(wl);
             lb_next_no.Text = next_lineno.ToString();
@@ -84,7 +84,7 @@ namespace WaferLine_Factory_Simulation
             ChangeStatusWaferLine(e.No);
         }
 
-        void ChangeStatusWaferLine(int no)
+        void ChangeStatusWaferLine(int no) // 리스트뷰에서 선택되지 않아도 값이 바뀜
         {
             ListViewItem lvi = lv_line.Items[no - 1];
             WaferLine wl = lvi.Tag as WaferLine;
@@ -125,6 +125,36 @@ namespace WaferLine_Factory_Simulation
         private void MainForm_Load(object sender, EventArgs e)
         {
             cb_ip.DataSource = MyNetwork.Addresses;
+            Manager manager = Manager.Singleton;
+            manager.RecvStsEndPoint += Manager_RecvStsEndPoint;
+        }
+
+        private void Manager_RecvStsEndPoint(object sender, RecvStsEndPtEventArgs e)
+        {
+            if(this.InvokeRequired) // 크로스 스레드 문제 해결
+            {
+                RecvStsEndPtEventHandler dele = Manager_RecvStsEndPoint;
+                this.Invoke(dele, new object[] { sender, e });
+            }
+            else
+            {
+                Manager manager = Manager.Singleton;
+                foreach(ListViewItem lvi in lv_line.Items)
+                {
+                    int no = int.Parse(lvi.SubItems[0].Text);
+                    manager.AddLine(no);
+                    manager.AddWafer(no, int.Parse(lvi.SubItems[1].Text));
+                }
+                ts_lb.Text = string.Format($"{e.IPAddress}:{e.Port}연결");
+            }
+        }
+
+        private void btn_set_Click(object sender, EventArgs e)
+        {
+            int port = int.Parse(tb_port.Text);
+            string ip = cb_ip.Text;
+            Manager manager = Manager.Singleton;
+            manager.StartServer(ip, port);
         }
     }
 }
