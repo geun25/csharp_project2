@@ -41,12 +41,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddLineEventArgs.cs" />
+    <Compile Include="ControlClient.cs" />
+    <Compile Include="ControlServer.cs" />
     <Compile Include="FactoryClient.cs" />
     <Compile Include="FactoryServer.cs" />
     <Compile Include="MsgType.cs" />
     <Compile Include="MyNetwork.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RecvStsEndPtEventArgs.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WaferLineLib\WaferLineLib.csproj">
+      <Project>{0B3AEB99-8DCE-4480-82E0-4AE3C43213E7}</Project>
+      <Name>WaferLineLib</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

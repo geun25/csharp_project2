@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
+﻿using System.IO;
 using System.Net;
 using System.Net.Sockets;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace WaferLineCommLib
 {
@@ -43,7 +38,7 @@ namespace WaferLineCommLib
             IPAddress addr = IPAddress.Parse(IP);
             IPEndPoint endp = new IPEndPoint(addr, Port);
             sock.Bind(endp);
-            sock.Listen(5);
+            sock.Listen(5); // 백로그 큐 설정 
             AcceptLoop(); // 서버가 끝날때까지 계속 수행
         }
 
@@ -76,7 +71,7 @@ namespace WaferLineCommLib
         private void SetAddressProc(BinaryReader br)
         {
             IPAddress ipaddr = IPAddress.Parse(br.ReadString());
-            int port = br.Read();
+            int port = br.ReadInt32();
             if(RecvStsEndPoint != null)
                 RecvStsEndPoint(this, new RecvStsEndPtEventArgs(ipaddr, port));
         }
