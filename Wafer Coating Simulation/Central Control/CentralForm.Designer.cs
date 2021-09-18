@@ -86,6 +86,7 @@ namespace Central_Control
             this.btn_set_fac.TabIndex = 2;
             this.btn_set_fac.Text = "공장설정";
             this.btn_set_fac.UseVisualStyleBackColor = true;
+            this.btn_set_fac.Click += new System.EventHandler(this.btn_set_fac_Click);
             // 
             // lv_line
             // 
@@ -126,6 +127,7 @@ namespace Central_Control
             this.btn_set_me.TabIndex = 7;
             this.btn_set_me.Text = "관제설정";
             this.btn_set_me.UseVisualStyleBackColor = true;
+            this.btn_set_me.Click += new System.EventHandler(this.btn_set_me_Click);
             // 
             // tbox_me_port
             // 

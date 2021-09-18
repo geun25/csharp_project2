@@ -84,6 +84,10 @@
       <Project>{7A6EFD31-05A2-4772-9E0C-C28BD5B20995}</Project>
       <Name>WaferLineCommLib</Name>
     </ProjectReference>
+    <ProjectReference Include="..\WaferLineLib\WaferLineLib.csproj">
+      <Project>{0b3aeb99-8dce-4480-82e0-4ae3c43213e7}</Project>
+      <Name>WaferLineLib</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
