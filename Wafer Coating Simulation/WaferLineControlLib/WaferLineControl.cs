@@ -26,6 +26,24 @@ namespace WaferLineControlLib
             InitializeComponent();
         }
 
+        public void SetStatus()
+        {
+            if(wl != null)
+            {
+                lb_wcnt.Text = wl.BWCnt.ToString();
+                lb_pcnt.Text = wl.AWCnt.ToString();
+                tbar_spin.Value = wl.Spin;
+                tbar_drop.Value = wl.Drop;
+            }
+            else
+            {
+                lb_wcnt.Text = "해당없음";
+                lb_pcnt.Text = "해당없음";
+                tbar_spin.Value = tbar_spin.Minimum;
+                tbar_drop.Value = tbar_drop.Minimum;
+            }
+        }
+
         private void tbar_wafer_Scroll(object sender, EventArgs e)
         {
             if (wl == null)

@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿using System;
+using System.IO;
 using System.Net;
 using System.Net.Sockets;
 using WaferLineLib;
@@ -9,6 +10,11 @@ namespace WaferLineCommLib
     {
         public event AddLineEventHandler AddedLine;
         public event AddWaferEventHandler AddedWafer;
+        public event AddPrEventHandler AddedPr;
+        public event SetSpinEventHandler SettedSpeed;
+        public event SetDropEventHandler SettedDrop;
+        public event EndPrEventHandler EndedPr;
+        public event EndCoatingEventHandler EndedCoating;
 
         string ip;
         int port;
@@ -58,10 +64,55 @@ namespace WaferLineCommLib
             {
                 case MsgType.MSG_FC_ADDLN: AddLineProc(br); break;
                 case MsgType.MSG_FC_ADDWF: AddWaferProc(br); break;
+                case MsgType.MSG_FC_ADDPR: AddPrProc(br); break;
+                case MsgType.MSG_FC_SETSP: SetSpeedProc(br); break;
+                case MsgType.MSG_FC_SETDR: SetDropProc(br); break;
+                case MsgType.MSG_FC_ENDPR: EndPrProc(br); break;
+                case MsgType.MSG_FC_ENDCO: EndCoatingProc(br); break;
             }
             br.Close();
             ms.Close();
             dosock.Close();
+        }
+
+        private void EndCoatingProc(BinaryReader br)
+        {
+            int no = br.ReadInt32();
+            int bwcnt = br.ReadInt32();
+            int awcnt = br.ReadInt32();
+            if (EndedCoating != null)
+                EndedCoating(this, new EndCoatingEventArgs(no, bwcnt, awcnt));
+        }
+
+        private void EndPrProc(BinaryReader br)
+        {
+            int no = br.ReadInt32();
+            if (EndedPr != null)
+                EndedPr(this, new EndPrEventArgs(no));
+        }
+
+        private void SetDropProc(BinaryReader br)
+        {
+            int no = br.ReadInt32();
+            int drop = br.ReadInt32();
+            if (SettedDrop != null)
+                SettedDrop(this, new SetDropEventArgs(no, drop));
+        }
+
+        private void SetSpeedProc(BinaryReader br)
+        {
+            int no = br.ReadInt32();
+            int speed = br.ReadInt32();
+            if (SettedSpeed != null)
+                SettedSpeed(this, new SetSpinEventArgs(no, speed));
+        }
+
+        private void AddPrProc(BinaryReader br)
+        {
+            int no = br.ReadInt32();
+            int pcnt = br.ReadInt32();
+            if (AddedPr != null)
+                AddedPr(this, new AddPrEventArgs(no, pcnt));
         }
 
         private void AddWaferProc(BinaryReader br)

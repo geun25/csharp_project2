@@ -11,3 +11,6 @@ C:\Users\jin yeong\.vscode\csharp_project2\Wafer Coating Simulation\Central Cont
 C:\Users\jin yeong\.vscode\csharp_project2\Wafer Coating Simulation\Central Control\obj\Debug\Central Control.csproj.CopyComplete
 C:\Users\jin yeong\.vscode\csharp_project2\Wafer Coating Simulation\Central Control\obj\Debug\Central Control.exe
 C:\Users\jin yeong\.vscode\csharp_project2\Wafer Coating Simulation\Central Control\obj\Debug\Central Control.pdb
+C:\Users\jin yeong\.vscode\csharp_project2\Wafer Coating Simulation\Central Control\bin\Debug\WaferLineLib.dll
+C:\Users\jin yeong\.vscode\csharp_project2\Wafer Coating Simulation\Central Control\bin\Debug\WaferLineLib.pdb
+C:\Users\jin yeong\.vscode\csharp_project2\Wafer Coating Simulation\Central Control\bin\Debug\WaferLineLib.xml

@@ -1,12 +1,18 @@
-﻿using System.IO;
+﻿using System;
+using System.IO;
 using System.Net;
 using System.Net.Sockets;
+using WaferLineLib;
 
 namespace WaferLineCommLib
 {
     public class FactoryServer
     {
         public event RecvStsEndPtEventHandler RecvStsEndPoint;
+        public event AddWaferEventHandler AddedWafer;
+        public event AddPrEventHandler AddedPr;
+        public event SetSpinEventHandler SettedSpin;
+        public event SetDropEventHandler SettedDrop;
 
         public string IP
         {
@@ -62,10 +68,51 @@ namespace WaferLineCommLib
             { 
                 case MsgType.MSG_CF_ADDSI: SetAddressProc(br);
                     break;
+                case MsgType.MSG_CF_ADDWF: AddWaferProc(br);
+                    break;
+                case MsgType.MSG_CF_ADDPR: AddPrProc(br);
+                    break;
+                case MsgType.MSG_CF_SETSP: SetSpeedProc(br);
+                    break;
+                case MsgType.MSG_CF_SETDP: SetDropProc(br);
+                    break;
+
             }
             br.Close();
             ms.Close();
             dosock.Close();
+        }
+
+        private void SetDropProc(BinaryReader br)
+        {
+            int no = br.ReadInt32();
+            int drop = br.ReadInt32();
+            if (SettedDrop != null)
+                SettedDrop(this, new SetDropEventArgs(no, drop));
+        }
+
+        private void SetSpeedProc(BinaryReader br)
+        {
+            int no = br.ReadInt32();
+            int spin = br.ReadInt32();
+            if (SettedSpin != null)
+                SettedSpin(this, new SetSpinEventArgs(no, spin));
+        }
+
+        private void AddPrProc(BinaryReader br)
+        {
+            int no = br.ReadInt32();
+            int pcnt = br.ReadInt32();
+            if (AddedPr != null)
+                AddedPr(this, new AddPrEventArgs(no, pcnt));
+        }
+
+        private void AddWaferProc(BinaryReader br)
+        {
+            int no = br.ReadInt32();
+            int wcnt = br.ReadInt32();
+            if (AddedWafer != null)
+                AddedWafer(this, new AddWaferEventArgs(no, wcnt));
         }
 
         private void SetAddressProc(BinaryReader br)

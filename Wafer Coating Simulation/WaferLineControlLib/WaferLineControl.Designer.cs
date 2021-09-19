@@ -233,6 +233,7 @@
             this.tbar_drop.TabIndex = 43;
             this.tbar_drop.Value = 20;
             this.tbar_drop.Scroll += new System.EventHandler(this.tbar_drop_Scroll);
+            this.tbar_drop.ValueChanged += new System.EventHandler(this.tbar_drop_Scroll);
             // 
             // lb_drop
             // 
@@ -253,6 +254,7 @@
             this.tbar_spin.TabIndex = 41;
             this.tbar_spin.Value = 1000;
             this.tbar_spin.Scroll += new System.EventHandler(this.tbar_spin_Scroll);
+            this.tbar_spin.ValueChanged += new System.EventHandler(this.tbar_spin_Scroll);
             // 
             // lb_spin
             // 

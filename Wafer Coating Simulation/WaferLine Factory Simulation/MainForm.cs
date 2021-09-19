@@ -40,6 +40,9 @@ namespace WaferLine_Factory_Simulation
             #endregion
 
             wdic.Add(no, wlf);
+
+            Manager manager = Manager.Singleton;
+            manager.AddLine(no);
         }
 
         private void Wlf_EndedPr(object sender, EndPrEventArgs e)
@@ -127,6 +130,84 @@ namespace WaferLine_Factory_Simulation
             cb_ip.DataSource = MyNetwork.Addresses;
             Manager manager = Manager.Singleton; // 단일체 참조
             manager.RecvStsEndPoint += Manager_RecvStsEndPoint;
+            manager.AddedWafer += Manager_AddedWafer;
+            manager.AddedPr += Manager_AddedPr;
+            manager.SettedSpin += Manager_SettedSpin;
+            manager.SettedDrop += Manager_SettedDrop;
+        }
+
+        private void Manager_SettedDrop(object sender, SetDropEventArgs e)
+        {
+            if (this.InvokeRequired) // 크로스 스레드 문제 해결
+            {
+                SetDropEventHandler dele = Manager_SettedDrop;
+                this.Invoke(dele, new object[] { sender, e });
+            }
+            else
+            {
+                ListViewItem lvi = lv_line.Items[e.No - 1];
+                WaferLine wl = lvi.Tag as WaferLine;
+                wl.Drop = e.Drop;
+                WaferLineForm lvf = wdic[e.No];
+                lvf.SetStatus();
+                if (lvi.Selected)
+                    lb_drop.Text = e.Drop.ToString();
+            }
+        }
+
+        private void Manager_SettedSpin(object sender, SetSpinEventArgs e)
+        {
+            if (this.InvokeRequired) // 크로스 스레드 문제 해결
+            {
+                SetSpinEventHandler dele = Manager_SettedSpin;
+                this.Invoke(dele, new object[] { sender, e });
+            }
+            else
+            {
+                ListViewItem lvi = lv_line.Items[e.No - 1];
+                WaferLine wl = lvi.Tag as WaferLine;
+                wl.Spin = e.Spin;
+                WaferLineForm lvf = wdic[e.No];
+                lvf.SetStatus();
+                if (lvi.Selected)
+                    lb_spin.Text = e.Spin.ToString();
+            }
+        }
+
+        private void Manager_AddedPr(object sender, AddPrEventArgs e)
+        {
+            if (this.InvokeRequired) // 크로스 스레드 문제 해결
+            {
+                AddPrEventHandler dele = Manager_AddedPr;
+                this.Invoke(dele, new object[] { sender, e });
+            }
+            else
+            {
+                ListViewItem lvi = lv_line.Items[e.No - 1];
+                WaferLine wl = lvi.Tag as WaferLine;
+                wl.InPr(e.PCnt);
+                ChangeStatusWaferLine(e.No);
+                WaferLineForm lvf = wdic[e.No];
+                lvf.Invalidate(true); // 시각화
+            }
+        }
+
+        private void Manager_AddedWafer(object sender, AddWaferEventArgs e)
+        {
+            if (this.InvokeRequired) // 크로스 스레드 문제 해결
+            {
+                AddWaferEventHandler dele = Manager_AddedWafer;
+                this.Invoke(dele, new object[] { sender, e });
+            }
+            else
+            {
+                ListViewItem lvi = lv_line.Items[e.No - 1];
+                WaferLine wl = lvi.Tag as WaferLine;
+                wl.InWafer(e.BWCnt);
+                ChangeStatusWaferLine(e.No);
+                WaferLineForm lvf = wdic[e.No];
+                lvf.Invalidate(true); // 시각화
+            }
         }
 
         private void Manager_RecvStsEndPoint(object sender, RecvStsEndPtEventArgs e)
@@ -144,6 +225,10 @@ namespace WaferLine_Factory_Simulation
                     int no = int.Parse(lvi.SubItems[0].Text);
                     manager.AddLine(no);
                     manager.AddWafer(no, int.Parse(lvi.SubItems[1].Text));
+                    WaferLine wl = lvi.Tag as WaferLine;
+                    manager.AddPr(no, wl.PCnt);
+                    manager.SetSpeed(no, wl.Spin);
+                    manager.SetDrop(no, wl.Drop);
                 }
                 ts_lb.Text = string.Format($"{e.IPAddress}:{e.Port}연결");
             }

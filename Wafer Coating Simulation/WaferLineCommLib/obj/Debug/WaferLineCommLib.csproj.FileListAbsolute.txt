@@ -4,3 +4,7 @@ C:\Users\jin yeong\.vscode\csharp_project2\Wafer Coating Simulation\WaferLineCom
 C:\Users\jin yeong\.vscode\csharp_project2\Wafer Coating Simulation\WaferLineCommLib\bin\Debug\WaferLineCommLib.pdb
 C:\Users\jin yeong\.vscode\csharp_project2\Wafer Coating Simulation\WaferLineCommLib\obj\Debug\WaferLineCommLib.dll
 C:\Users\jin yeong\.vscode\csharp_project2\Wafer Coating Simulation\WaferLineCommLib\obj\Debug\WaferLineCommLib.pdb
+C:\Users\jin yeong\.vscode\csharp_project2\Wafer Coating Simulation\WaferLineCommLib\bin\Debug\WaferLineLib.dll
+C:\Users\jin yeong\.vscode\csharp_project2\Wafer Coating Simulation\WaferLineCommLib\bin\Debug\WaferLineLib.pdb
+C:\Users\jin yeong\.vscode\csharp_project2\Wafer Coating Simulation\WaferLineCommLib\bin\Debug\WaferLineLib.xml
+C:\Users\jin yeong\.vscode\csharp_project2\Wafer Coating Simulation\WaferLineCommLib\obj\Debug\WaferLineCommLib.csproj.CopyComplete

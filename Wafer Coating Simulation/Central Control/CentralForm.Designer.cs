@@ -100,6 +100,7 @@ namespace Central_Control
             this.lv_line.TabIndex = 3;
             this.lv_line.UseCompatibleStateImageBehavior = false;
             this.lv_line.View = System.Windows.Forms.View.Details;
+            this.lv_line.SelectedIndexChanged += new System.EventHandler(this.lv_line_SelectedIndexChanged);
             // 
             // columnHeader1
             // 
@@ -179,6 +180,7 @@ namespace Central_Control
             this.btn_wafer.TabIndex = 11;
             this.btn_wafer.Text = "투입";
             this.btn_wafer.UseVisualStyleBackColor = true;
+            this.btn_wafer.Click += new System.EventHandler(this.btn_wafer_Click);
             // 
             // btn_pr
             // 
@@ -188,6 +190,7 @@ namespace Central_Control
             this.btn_pr.TabIndex = 12;
             this.btn_pr.Text = "투입";
             this.btn_pr.UseVisualStyleBackColor = true;
+            this.btn_pr.Click += new System.EventHandler(this.btn_pr_Click);
             // 
             // tbar_wafer
             // 
@@ -196,6 +199,7 @@ namespace Central_Control
             this.tbar_wafer.Name = "tbar_wafer";
             this.tbar_wafer.Size = new System.Drawing.Size(104, 69);
             this.tbar_wafer.TabIndex = 13;
+            this.tbar_wafer.Scroll += new System.EventHandler(this.tbar_wafer_Scroll);
             // 
             // tbar_pr
             // 
@@ -204,6 +208,7 @@ namespace Central_Control
             this.tbar_pr.Name = "tbar_pr";
             this.tbar_pr.Size = new System.Drawing.Size(104, 69);
             this.tbar_pr.TabIndex = 14;
+            this.tbar_pr.Scroll += new System.EventHandler(this.tbar_pr_Scroll);
             // 
             // label5
             // 
@@ -232,6 +237,7 @@ namespace Central_Control
             this.tbar_drop.Size = new System.Drawing.Size(104, 69);
             this.tbar_drop.TabIndex = 22;
             this.tbar_drop.Value = 20;
+            this.tbar_drop.Scroll += new System.EventHandler(this.tbar_drop_Scroll);
             // 
             // tbar_spin
             // 
@@ -242,6 +248,7 @@ namespace Central_Control
             this.tbar_spin.Size = new System.Drawing.Size(104, 69);
             this.tbar_spin.TabIndex = 21;
             this.tbar_spin.Value = 1000;
+            this.tbar_spin.Scroll += new System.EventHandler(this.tbar_spin_Scroll);
             // 
             // lb_drop
             // 
