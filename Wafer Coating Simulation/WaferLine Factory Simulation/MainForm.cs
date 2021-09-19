@@ -125,7 +125,7 @@ namespace WaferLine_Factory_Simulation
         private void MainForm_Load(object sender, EventArgs e)
         {
             cb_ip.DataSource = MyNetwork.Addresses;
-            Manager manager = Manager.Singleton;
+            Manager manager = Manager.Singleton; // 단일체 참조
             manager.RecvStsEndPoint += Manager_RecvStsEndPoint;
         }
 
