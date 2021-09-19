@@ -2,7 +2,7 @@
 
 namespace WaferLineCommLib
 {
-    public delegate void AddLineEventHandler(object sender, AddLineEventArgs e);)
+    public delegate void AddLineEventHandler(object sender, AddLineEventArgs e);
     public class AddLineEventArgs : EventArgs
     {
         public int No

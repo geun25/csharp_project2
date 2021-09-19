@@ -15,7 +15,7 @@ namespace WaferLineCommLib
                 IPHostEntry iphe = Dns.GetHostEntry(name);
                 foreach(IPAddress addr in iphe.AddressList)
                 {
-                    if(addr.AddressFamily == AddressFamily.InterNetwork)
+                    if(addr.AddressFamily == AddressFamily.InterNetwork) // IPv4
                         addresses.Add(addr);
                 }
                 return addresses;
