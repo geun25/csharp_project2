@@ -13,6 +13,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WaferLine 예광탄", "Wafe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WaferLine Factory Simulation", "WaferLine Factory Simulation\WaferLine Factory Simulation.csproj", "{2A69E0C0-C4F7-4537-AB11-7423262BB20D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Central Control", "Central Control\Central Control.csproj", "{7295680C-2183-42C7-99E5-E85DB5C824EC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WaferLineCommLib", "WaferLineCommLib\WaferLineCommLib.csproj", "{7A6EFD31-05A2-4772-9E0C-C28BD5B20995}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +43,14 @@ Global
 		{2A69E0C0-C4F7-4537-AB11-7423262BB20D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2A69E0C0-C4F7-4537-AB11-7423262BB20D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2A69E0C0-C4F7-4537-AB11-7423262BB20D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7295680C-2183-42C7-99E5-E85DB5C824EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7295680C-2183-42C7-99E5-E85DB5C824EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7295680C-2183-42C7-99E5-E85DB5C824EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7295680C-2183-42C7-99E5-E85DB5C824EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A6EFD31-05A2-4772-9E0C-C28BD5B20995}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A6EFD31-05A2-4772-9E0C-C28BD5B20995}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A6EFD31-05A2-4772-9E0C-C28BD5B20995}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A6EFD31-05A2-4772-9E0C-C28BD5B20995}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
