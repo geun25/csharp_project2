@@ -35,17 +35,19 @@ namespace WaferLine_예광탄
             // waferLineControl1
             // 
             this.waferLineControl1.Line = null;
-            this.waferLineControl1.Location = new System.Drawing.Point(12, 31);
+            this.waferLineControl1.Location = new System.Drawing.Point(10, 26);
+            this.waferLineControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.waferLineControl1.Name = "waferLineControl1";
-            this.waferLineControl1.Size = new System.Drawing.Size(900, 555);
+            this.waferLineControl1.Size = new System.Drawing.Size(720, 462);
             this.waferLineControl1.TabIndex = 0;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(907, 640);
+            this.ClientSize = new System.Drawing.Size(726, 533);
             this.Controls.Add(this.waferLineControl1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Form1";
             this.Text = "WaferLine 예광탄";
             this.Load += new System.EventHandler(this.Form1_Load);

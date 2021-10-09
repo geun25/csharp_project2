@@ -38,9 +38,10 @@ namespace Wafer_예광탄
             // 
             // btn_start
             // 
-            this.btn_start.Location = new System.Drawing.Point(98, 39);
+            this.btn_start.Location = new System.Drawing.Point(78, 32);
+            this.btn_start.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btn_start.Name = "btn_start";
-            this.btn_start.Size = new System.Drawing.Size(119, 38);
+            this.btn_start.Size = new System.Drawing.Size(95, 32);
             this.btn_start.TabIndex = 0;
             this.btn_start.Text = "시작";
             this.btn_start.UseVisualStyleBackColor = true;
@@ -49,10 +50,12 @@ namespace Wafer_예광탄
             // pn_wafer
             // 
             this.pn_wafer.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pn_wafer.Location = new System.Drawing.Point(50, 106);
+            this.pn_wafer.Location = new System.Drawing.Point(53, 90);
+            this.pn_wafer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pn_wafer.Name = "pn_wafer";
-            this.pn_wafer.Size = new System.Drawing.Size(205, 175);
+            this.pn_wafer.Size = new System.Drawing.Size(144, 144);
             this.pn_wafer.TabIndex = 1;
+            this.pn_wafer.Wafer = null;
             this.pn_wafer.Paint += new System.Windows.Forms.PaintEventHandler(this.pn_wafer_Paint);
             // 
             // tm_coating
@@ -61,11 +64,12 @@ namespace Wafer_예광탄
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(340, 356);
+            this.ClientSize = new System.Drawing.Size(272, 297);
             this.Controls.Add(this.pn_wafer);
             this.Controls.Add(this.btn_start);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Form1";
             this.Text = "Wafer 예광탄";
             this.ResumeLayout(false);

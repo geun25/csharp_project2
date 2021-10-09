@@ -15,6 +15,9 @@ namespace WaferLineLib
         public event EndCoatingEventHandler EndedCoating;
         #endregion
 
+        /// <summary>
+        /// 생산라인번호
+        /// </summary>
         public int No
         {
             get;
@@ -39,8 +42,8 @@ namespace WaferLineLib
             Drop = 20;
         }
 
-        List<Wafer> bwafers = new List<Wafer>(); // 코팅전
-        List<Wafer> awafers = new List<Wafer>(); // 코팅 완료
+        List<Wafer> bwafers = new List<Wafer>(); // 코팅전 wafers
+        List<Wafer> awafers = new List<Wafer>(); // 코팅 완료 wafers
 
         public Wafer LastWafer
         {
@@ -52,7 +55,7 @@ namespace WaferLineLib
             }
         }
 
-        public void EndCoating(int bwcnt, int awcnt)
+        public void EndCoating(int bwcnt, int awcnt) // 갯수 매핑 작업
         {
             while (bwafers.Count > bwcnt)
             {
@@ -64,7 +67,7 @@ namespace WaferLineLib
             }
         }
 
-        Wafer nwafer;
+        Wafer nwafer; //현재 코팅하고 있는 Wafer
         int nowp; // 1병은 1000cell 코팅가능
 
         /// <summary>
@@ -78,6 +81,9 @@ namespace WaferLineLib
             }
         }
 
+        /// <summary>
+        /// 코팅하지 않은 Wafer 개수
+        /// </summary>
         public int BWCnt
         {
             get
@@ -123,7 +129,7 @@ namespace WaferLineLib
         }
 
         /// <summary>
-        /// 코팅 가능한 cell 개수
+        /// 현재 코팅에 사용하고 있는 코팅액의 남은 양
         /// </summary>
         public int NPcnt
         {

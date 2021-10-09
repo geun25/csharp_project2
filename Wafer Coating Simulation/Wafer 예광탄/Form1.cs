@@ -27,7 +27,7 @@ namespace Wafer_예광탄
         private void tm_coating_Tick(object sender, EventArgs e)
         {
             if(Wafer == null)
-                Wafer = new Wafer();
+                Wafer = new Wafer(); // Wafer 개체가 없다면 생성
             Wafer.Coating(rand.Next(70, 100)); // 품질 수준 70% ~ 100% 랜덤값
             if (Wafer.Increment() == false)
             {
